@@ -6,8 +6,7 @@ function Home() {
   return (
     <>
 <Header/>
-
-    <main >
+<main>
   
       <div className="banner">
         <p className="slogan">Chez vous, partout et ailleurs</p>
@@ -18,7 +17,7 @@ function Home() {
           <p className="titre">Titre de la location</p>
 
           {/* props: */}
-          id =""
+          {/* id =""
           title
           cover
           pictures
@@ -27,7 +26,7 @@ function Home() {
           rating
           location
           equipments
-          tags
+          tags */}
 
           {/* {
 		"id": "7af00cd6",
@@ -79,8 +78,8 @@ function Home() {
         </div>
 
       </div>
-
-    </main>
+      </main>
+    
     <Footer/>
     </>
   );
