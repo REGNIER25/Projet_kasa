@@ -23,4 +23,8 @@
 .logokasa {
   width: 210px;
   height: 70px;
-}/*# sourceMappingURL=header.css.map */
+}
+
+.title--red {
+  color: red;
+}/*# sourceMappingURL=style.css.map

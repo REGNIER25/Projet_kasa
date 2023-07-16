@@ -1,5 +1,5 @@
-import logokasa2 from './logokasa2.png';
 import './footer.css';
+import logokasa2 from './logokasa2.png';
 
 function Footer() {
   return (
