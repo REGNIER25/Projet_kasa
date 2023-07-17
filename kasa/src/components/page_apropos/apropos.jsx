@@ -1,17 +1,13 @@
 import './apropos.css';
-import Header from '../header/header';
-import Footer from '../footer/footer';
-
 import bannerapropos from './banner_apropos.png';
 
 
 function Apropos() {
   return (
     <>
-<Header/>
 
     <div>
-    <img className="logokasa" src={bannerapropos} alt="Bannière A propos" />
+    <img className="bannerapropos" src={bannerapropos} alt="Bannière A propos" />
 
     <div>
 <ul>
@@ -43,7 +39,6 @@ locataire, cela permet à nos équipes de vérifier que les standards sont bien 
 
 
     </div>
-    <Footer/>
     </>
   );
 }

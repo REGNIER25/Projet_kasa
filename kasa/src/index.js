@@ -10,9 +10,12 @@ import {
   Route
 } from "react-router-dom";
 
-// import Header from '././components/header/header';
+import Header from '././components/header/header';
+import Footer from '././components/footer/footer';
 import Home from '././components/home/home';
-// import Footer from '././components/footer/footer';
+import Erreur from '././components/page_erreur/erreur';
+import Fiche from '././components/fiche_logement/fiche';
+import Apropos from '././components/page_apropos/apropos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

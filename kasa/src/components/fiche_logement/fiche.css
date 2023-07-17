@@ -1,1 +1,41 @@
-/*# sourceMappingURL=fiche.css.map */
+h2, h3, p {
+  color: #FF6060;
+}
+
+.tg {
+  color: #FFFFFF;
+  background-color: #FF6060;
+  list-style-type: none;
+}
+
+.colonne_fiche {
+  display: flex;
+  flex-direction: column;
+}
+
+.circle {
+  background-color: #C4C4C4;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.tag {
+  width: 115px;
+  height: 25px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail_description, .detail_equipement {
+  width: 50%;
+}
+
+.js-expandmore-title {
+  width: 50%;
+}/*# sourceMappingURL=fiche.css.map */

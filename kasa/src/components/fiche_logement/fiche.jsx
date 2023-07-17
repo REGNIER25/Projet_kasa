@@ -1,6 +1,4 @@
 import './fiche.css';
-import Header from '../header/header';
-import Footer from '../footer/footer';
 
 import imagelocation from './carrousel_fiche.png';
 
@@ -8,7 +6,7 @@ import imagelocation from './carrousel_fiche.png';
 function Fiche() {
   return (
     <>
-<Header/>
+
 
     {/* Première colonne */}
     <div>
@@ -22,9 +20,11 @@ function Fiche() {
     </div>
 
     <div>
-<div>Cozy</div>
-<div>Canal</div>
-<div>Paris 10</div>
+      <ul className='tag'>
+<li className='tg'>Cozy</li>
+<li className='tg'>Canal</li>
+<li className='tg'>Paris 10</li>
+</ul>
 
 
     </div>
@@ -32,11 +32,11 @@ function Fiche() {
     </div>
 
 {/* Deuxième colonne */}
-    <div>
+<div className='colonne_fiche'>
 
     <div>
 <p>Alexandre Dumas</p>
-<span>cercle à faire en sass/css</span>
+<span className='circle'>cercle</span>
     </div>
 
     <div>
@@ -52,18 +52,18 @@ function Fiche() {
 
     </div>
 
-    <div>
+    <div className='details'>
     <ul>
-  <div>
-  <li>Description</li>
-  <p>Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. 
+  <div className='detail_description'>
+  <li className ='js-expandmore-title'>Description</li>
+  <p className = 'js-expandmore'>Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. 
     Au cœur de Paris avec 5 lignes de métro et de nombreux bus. 
     Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. 
     Vous êtes à1 station de la gare de l'est (7 minutes à pied). </p>
   </div>
-  <div>
-  <li>Équipement</li>
-  <ul>
+  <div className='detail_equipement'>
+  <li className ='js-expandmore-title'>Équipement</li>
+  <ul className = 'js-expandmore'>
     <li>Climatisation</li>
     <li>Wi-Fi</li>
     <li>Cuisine</li>
@@ -83,7 +83,7 @@ function Fiche() {
   
 
     </div>
-    <Footer/>
+    
     </>
   );
 }
