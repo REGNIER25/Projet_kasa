@@ -26,11 +26,35 @@ border-radius :10px;
 display:flex;
 }
 
-.details {display:flex;
-    flex-direction: row;
+.stars {display:flex;
+    color: $color-gris;
+    list-style-type:none;
+    font-size:36px;
+}
+
+.starrose {
+    color: $color-rose;
+
+}
+
+.details {
+    display:inline;
+float: left;
+width:100%;
 }
 
 .detail_description, .detail_equipement{
 width:50%;}
 
-.js-expandmore-title{width: 50%;}
+.js-expandmore-title{
+    color: #F6F6F6;
+    background-color: #FF6060;
+    padding-left:10px;
+    border-radius:5px;
+    font-size:24px;
+}
+
+.js-expandmore{padding-left:15px;
+    color:#FF6060;
+    list-style-type:none;
+}

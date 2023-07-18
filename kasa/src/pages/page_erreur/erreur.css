@@ -1,0 +1,22 @@
+h1 {
+  color: #FF6060;
+  text-align: center;
+  font-weight: 700;
+  font-size: 288px;
+  margin-bottom: 30px;
+}
+
+.texte_erreur {
+  color: #FF6060;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.lien_accueil {
+  color: #FF6060;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}/*# sourceMappingURL=erreur.css.map */

@@ -1,5 +1,5 @@
 import './header.css';
-import logokasa from './logokasa.png';
+import logokasa from '../../img/logokasa.png';
 
 
 
@@ -10,7 +10,7 @@ function Header() {
       <nav className="nav">
       <a href="#" >Accueil</a>
 
-        <a href="apropos.jsx" target="_blank">À propos</a>
+        <a href="apropos.jsx">À propos</a>
 
         
 

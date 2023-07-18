@@ -1,14 +1,14 @@
 import './footer.css';
-import logokasa2 from './logokasa2.png';
+import logokasa2 from '../../img/logokasa2.png';
 
 function Footer() {
   return (
 
     <footer className="footer">
       <img src={logokasa2} alt="Logo Kasa" />
-      <a className="rights">
+      <div className="rights">
         © 2020 Kasa. All rights reserved
-      </a>
+      </div>
     </footer>
   );
 }

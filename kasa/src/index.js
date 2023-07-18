@@ -10,12 +10,10 @@ import {
   Route
 } from "react-router-dom";
 
-import Header from '././components/header/header';
-import Footer from '././components/footer/footer';
-import Home from '././components/home/home';
-import Erreur from '././components/page_erreur/erreur';
-import Fiche from '././components/fiche_logement/fiche';
-import Apropos from '././components/page_apropos/apropos';
+import Home from '././pages/home/home';
+import Erreur from '././pages/page_erreur/erreur';
+import Fiche from '././pages/fiche_logement/fiche';
+import Apropos from '././pages/page_apropos/apropos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,9 +23,17 @@ root.render(
     <Router>
   <Routes>
 
-  {/* <Route path='/' element={<Header />}/> */}
 <Route path='/' element={<Home />}/>
-{/* <Route path='/' element={<Footer />}/> */}
+
+<Route path='/' element={<Fiche />}/>
+<Route path='/' element={<Apropos />}/>
+
+<Route path='/' element={<Erreur />}/>
+
+{/* <Route path='/home' element={<Home />}/>
+<Route path='/erreur' element={<Erreur />}/>
+<Route path='/fiche' element={<Fiche />}/>
+<Route path='/apropos' element={<Apropos />}/> */}
     
 
     </Routes>

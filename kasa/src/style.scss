@@ -1,9 +1,9 @@
-@use "././components/header/header.scss";
-@use "././components/home/home.scss";
-@use "././components/footer/footer.scss";
-@use "././components/fiche_location/fiche.scss";
-@use "././components/page_apropos/apropos.scss";
-@use "././components/page_erreur/erreur.scss";
+@use "././composants/header/header.scss";
+@use "././composants/footer/footer.scss";
+@use "././pages/home/home.scss";
+@use "././pages/fiche_location/fiche.scss";
+@use "././pages/page_apropos/apropos.scss";
+@use "././pages/page_erreur/erreur.scss";
 
 
 .title--red{color:green}
