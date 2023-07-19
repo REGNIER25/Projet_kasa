@@ -1,5 +1,6 @@
 import './header.css';
 import logokasa from '../../img/logokasa.png';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -8,13 +9,15 @@ function Header() {
     <header className="header">
       <img className="logokasa" src={logokasa} alt="Logo Kasa" />
       <nav className="nav">
-      <a href="#" >Accueil</a>
 
-        <a href="apropos.jsx">À propos</a>
+        <NavLink className="navbar-item" activeClassName="is-active" to="/" exact >
+          Accueil
+        </NavLink>
+        <NavLink className="navbar-item" activeClassName="is-active" to="/a-propos" exact >
+          A propos
+        </NavLink>
 
-        
-
-        </nav>
+      </nav>
     </header>
   );
 }

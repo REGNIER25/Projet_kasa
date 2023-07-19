@@ -9,7 +9,8 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-
+import Header from '././composants/header/header';
+import Footer from '././composants/footer/footer';
 import Home from '././pages/home/home';
 import Erreur from '././pages/page_erreur/erreur';
 import Fiche from '././pages/fiche_logement/fiche';
@@ -21,14 +22,17 @@ root.render(
 
     {/* <App /> */}
     <Router>
+
+<Header/>
+
   <Routes>
 
 <Route path='/' element={<Home />}/>
 
-<Route path='/' element={<Fiche />}/>
-<Route path='/' element={<Apropos />}/>
+<Route path='/fiche-logement/:id' element={<Fiche />}/>
+<Route path='/a-propos' element={<Apropos />}/>
 
-<Route path='/' element={<Erreur />}/>
+<Route path='/erreur' element={<Erreur />}/>
 
 {/* <Route path='/home' element={<Home />}/>
 <Route path='/erreur' element={<Erreur />}/>
@@ -37,6 +41,8 @@ root.render(
     
 
     </Routes>
+
+    <Footer/>
 </Router>
 
   </React.StrictMode>
