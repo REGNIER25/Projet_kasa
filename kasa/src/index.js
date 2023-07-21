@@ -32,12 +32,7 @@ root.render(
 <Route path='/fiche-logement/:id' element={<Fiche />}/>
 <Route path='/a-propos' element={<Apropos />}/>
 
-<Route path='/erreur' element={<Erreur />}/>
-
-{/* <Route path='/home' element={<Home />}/>
-<Route path='/erreur' element={<Erreur />}/>
-<Route path='/fiche' element={<Fiche />}/>
-<Route path='/apropos' element={<Apropos />}/> */}
+<Route path= "*" element={<Erreur />}/>
     
 
     </Routes>

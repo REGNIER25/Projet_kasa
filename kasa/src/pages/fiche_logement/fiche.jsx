@@ -2,8 +2,6 @@ import './fiche.css';
 
 import imagelocation from '../../img/carrousel_fiche.png';
 
-import Header from '../../composants/header/header';
-import Footer from '../../composants/footer/footer';
 
 
 function Fiche() {
@@ -11,7 +9,6 @@ function Fiche() {
     
     <>
 
-<Header/>
     {/* Première colonne */}
     <div>
     <img src={imagelocation} alt="Image location" />
@@ -60,14 +57,14 @@ function Fiche() {
     
   <div className='detail_description'>
 
-  <li className ='js-expandmore-title'>Description</li>
+  <li className ='js-expandmore-title'>Description ⌃</li>
   <p className = 'js-expandmore'>Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. 
     Au cœur de Paris avec 5 lignes de métro et de nombreux bus. 
     Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. 
     Vous êtes à1 station de la gare de l'est (7 minutes à pied). </p>
   </div>
   <div className='detail_equipement'>
-  <li className ='js-expandmore-title'>Équipement</li>
+  <li className ='js-expandmore-title'>Équipement ⌃</li>
   <ul className = 'js-expandmore'>
     <li>Climatisation</li>
     <li>Wi-Fi</li>
@@ -89,7 +86,6 @@ function Fiche() {
 
     </div>
 
-    <Footer/>
     
     </>
   );

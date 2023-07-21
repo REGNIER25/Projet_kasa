@@ -1,30 +1,27 @@
 
 import './erreur.css';
 
-import Header from '../../composants/header/header';
-import Footer from '../../composants/footer/footer';
+
+
+import { NavLink } from 'react-router-dom';
 
 function Erreur() {
   return (
     <>
 
-<Header/>
+
 
 <h1>404</h1>
-<div className='texte_erreur'>Oups! La page que vous demandez n'existe pas.</div>
-
-<a className='lien_accueil' href="./components/home.jsx">Retourner sur la page d’accueil</a>
+<div className='texte_erreur'>Oups ! La page que vous demandez n'existe pas.</div>
 
 
-{/* <NavLink
-    className="navbar-item"
-    activeClassName="is-active"
-    to="/home"
-    exact
->
+
+
+<NavLink className="lien_accueil navbar-item" activeClassName="is-active" to="/" exact >
 Retourner sur la page d’accueil
-</NavLink> */}
-<Footer/>
+        </NavLink>
+        
+
   
     </>
   );

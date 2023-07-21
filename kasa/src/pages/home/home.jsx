@@ -1,21 +1,18 @@
 
 import './home.css';
 
-import Header from '../../composants/header/header';
-import Footer from '../../composants/footer/footer';
+
 
 // Pour pré-visualisation
 
 import Fiche from '../fiche_logement/fiche';
-import Apropos from '../page_apropos/apropos';
-import Erreur from '../page_erreur/erreur';
 
 
 
 function Home() {
   return (
     <>
-<Header/>
+
 <main>
   
       <div className="banner">
@@ -46,14 +43,11 @@ function Home() {
       </div>
       </main>
     
-    <Footer/>
 
   {/* pour prévisualisation   */}
 
 <Fiche/>
 
-<Apropos/>
-<Erreur/>
 
     </>
   );
