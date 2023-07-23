@@ -185,9 +185,31 @@ h2, h3, p {
   font-size: 24px;
 }
 
-.description_valeur {
+button {
+  background-color: #FF6060;
+  color: white;
+  border: none;
+}
+
+.changestyle:focus {
+  animation-direction: alternate-reverse;
+  transition: 1s;
+  transform: rotate(180deg);
+}
+
+#valeur {
+  position: relative;
+}
+
+#description {
+  position: absolute;
   padding-left: 15px;
   padding-right: 15px;
+  display: none;
+}
+
+#valeur:hover #description {
+  display: block;
 }
 
 h1 {

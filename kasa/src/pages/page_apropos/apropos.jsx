@@ -1,3 +1,5 @@
+
+import collapse from '../../composants/collapse/collapse';
 import './apropos.css';
 import bannerapropos from '../../img/banner_apropos.png';
 
@@ -8,13 +10,10 @@ function Apropos() {
     
     <img className="bannerapropos" src={bannerapropos} alt="Bannière A propos" />
 
+    
+
     <div className='valeurs'>
 <ul>
-<div>
-<li id="valeur">
-	<p id="description">Ceci est du contenu...</p>
-</li>
-</div>
   <div><li className='valeur' id ="valeur">Fiabilité <button className='changestyle'>⌃</button></li>
   <p className='description' id = "description">Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
  régulièrement vérifiées par nos équipes.</p></div>

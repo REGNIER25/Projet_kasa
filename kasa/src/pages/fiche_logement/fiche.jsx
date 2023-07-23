@@ -1,3 +1,5 @@
+import collapse from '../../composants/collapse/collapse';
+
 import './fiche.css';
 
 import imagelocation from '../../img/carrousel_fiche.png';

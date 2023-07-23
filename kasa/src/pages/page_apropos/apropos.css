@@ -25,31 +25,4 @@
   padding-left: 10px;
   border-radius: 5px;
   font-size: 24px;
-}
-
-button {
-  background-color: #FF6060;
-  color: white;
-  border: none;
-}
-
-.changestyle:focus {
-  animation-direction: alternate-reverse;
-  transition: 1s;
-  transform: rotate(180deg);
-}
-
-#valeur {
-  position: relative;
-}
-
-#description {
-  position: absolute;
-  padding-left: 15px;
-  padding-right: 15px;
-  display: none;
-}
-
-#valeur:hover #description {
-  display: block;
 }/*# sourceMappingURL=apropos.css.map */
