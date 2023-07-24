@@ -23,7 +23,7 @@ function Home() {
         <p className="slogan">Chez vous, partout et ailleurs</p>
       </div>
 
-      <div className="gallery">
+      <div className="gallery" id="gallery">
    
 
 
