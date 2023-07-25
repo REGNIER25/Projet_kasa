@@ -1,4 +1,5 @@
-import collapse from '../../composants/collapse/collapse';
+import React from 'react';
+import Collapse from '../../composants/collapse/collapse';
 
 import './fiche.css';
 
@@ -55,19 +56,15 @@ function Fiche() {
 
     </div>
 
-    <div className='details'>
-    
-  <div className='detail_description'>
-
-  <li className ='js-expandmore-title'>Description ⌃</li>
-  <p className = 'js-expandmore'>Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. 
+    <div className='valeurs'>
+      <Collapse title="Description">
+      <p>Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. 
     Au cœur de Paris avec 5 lignes de métro et de nombreux bus. 
     Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. 
-    Vous êtes à1 station de la gare de l'est (7 minutes à pied). </p>
-  </div>
-  <div className='detail_equipement'>
-  <li className ='js-expandmore-title'>Équipement ⌃</li>
-  <ul className = 'js-expandmore'>
+    Vous êtes à1 station de la gare de l'est (7 minutes à pied).</p>
+      </Collapse>
+      <Collapse title="Équipement">
+      <ul className = 'js-expandmore'>
     <li>Climatisation</li>
     <li>Wi-Fi</li>
     <li>Cuisine</li>
@@ -76,10 +73,8 @@ function Fiche() {
     <li>Sèche-cheveux</li>
     <li>Cintres</li>
 </ul>
-  </div>
-
-
-
+      </Collapse>
+      
     </div>
 
 

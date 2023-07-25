@@ -1,3 +1,5 @@
+//récup id dynamiquement
+
 import React, { useState, useEffect } from 'react';
 import './datajson.css';
 
