@@ -1,5 +1,7 @@
 //récup id dynamiquement
 
+
+import data from "../../logements.json";
 import React, { useState, useEffect } from 'react';
 import './datajson.css';
 
@@ -8,6 +10,7 @@ const DataComponent = ({ itemId }) => {
 
   useEffect(() => {
     const url = 'http://localhost:3000/logements';
+    console.log (data);
 
   
     fetch(url)
@@ -25,11 +28,12 @@ const DataComponent = ({ itemId }) => {
   if (!itemData) {
     return <div className="chargement">Chargement des données ...</div>;
   }
+  //cover;titre = props
 
   return (
     <div className="location">
-      <img src={itemData.cover} alt={itemData.title} />
-      <p className="titre">{itemData.title}</p>
+      <a href="http://localhost:3000/fiche-logements/1"><img src={itemData.cover} alt={itemData.title} />
+      <p className="titre">{itemData.title}</p></a>
     </div>
   );
 };
