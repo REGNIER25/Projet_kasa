@@ -1,47 +1,72 @@
 //récup id dynamiquement
 
 
-import data from "../../logements.json";
 import React, { useState, useEffect } from 'react';
+
 import './datajson.css';
+
+// Importez les données directement depuis le fichier JSON
+// Récupération des données JSON
+import data from "../../logements.json";
+
 
 const DataComponent = ({ itemId }) => {
   const [itemData, setItemData] = useState(null);
 
   useEffect(() => {
-    const url = 'http://localhost:3000/logements';
-    console.log (data);
+console.log(data); 
 
-  
-    fetch(url)
-      .then((response) => response.json()) 
-
-      .then((jsonData) => {
-        const item = jsonData.find((item) => item.id === itemId);
-        setItemData(item);
-      })
-
-
-      .catch((error) => console.error('Erreur lors de la récupération des données :', error));
+    // Simulation de la récupération de données depuis le serveur
+    const item = data.find((item) => item.id === itemId);
+    setItemData(item);
   }, [itemId]);
 
-  if (!itemData) {
-    return <div className="chargement">Chargement des données ...</div>;
-  }
-  //cover;titre = props
 
   return (
-    <div className="location">
-      <a href="http://localhost:3000/fiche-logements/1"><img src={itemData.cover} alt={itemData.title} />
-      <p className="titre">{itemData.title}</p></a>
-    </div>
-  );
-};
+      <div>
+        {data.map((item) => (
+          <div key={item.id}>
+            <p>{item.title}</p>
+            <img src={item.cover} alt={item.title} />
+          </div>
+        ))}
+      </div>
+    );
+  
+
+  
+  if (!itemData) {
+    return <div className="chargement">Chargement des données ...</div>;
+    
+  }}
+  //cover;titre = props
+
+  // return (
+  //   <div>
+  //     {/* Vous pouvez maintenant utiliser "itemData" ici comme avant */}
+  //     {itemData && (
+  //     //   <div>
+  //     //     <h1>{itemData.title}</h1>
+  //     //     <p>{itemData.description}</p>
+      //     {/* Ajoutez d'autres éléments pour afficher d'autres propriétés de "itemData" */}
+      //   </div>
+      //   <div className="location">
+      //   <a href="http://localhost:3000/fiche-logements/1"><img src={itemData.cover} alt={itemData.title} />
+      //   <p className="titre">{itemData.title}</p></a>
+      // </div>
+      // )}
+    // </div>
+  // );
+// };
 
 export default DataComponent;
 
 
-// import './datajson.css';
+
+
+  
+
+
 
 // import React, { useState, useEffect } from 'react';
 
@@ -57,10 +82,9 @@ export default DataComponent;
 
 // //   displayWorks(works);
 // // URL du fichier JSON partir pour récupérer les données
-//     // const url = 'https://exemple.com/chemin/vers/data.json';
-//     const url = "http://localhost:3000/src/logements.json";
 
-// // Récupération des données JSON
+
+
 //     fetch(url)
 
 
@@ -93,26 +117,7 @@ export default DataComponent;
 //   // Fonction pour récupérer les données
 // function displayItems(items) {
 
-//   //constante gallery
-//   const gallery = document.getElementById("gallery");
-
-//   document.getElementById("gallery").innerHTML = "";
-  
-//   //Boucle pour la création de la galerie
-//   for (let item of items) {
-//   let location = document.createElement("div");
-//   location.setAttribute("className","location");
-  
-//   let img = document.createElement("img");
-//   img.setAttribute("src", item.cover);
-//   img.setAttribute("alt", item.title);
-//   location.appendChild(img);
-  
-//   let titre = document.createElement("p");
-//   titre.innerHTML = item.title;
-//   titre.setAttribute("className","titre");
-//   location.appendChild(titre);
-//   gallery.appendChild(location);
+//   
 
 //    // Traitement des données
 //    return (

@@ -3,14 +3,7 @@ import './home.css';
 
 import DataComponent from '../.././composants/datajson/datajson';
 
-
-
-
-
-// Pour pré-visualisation
-
 import Fiche from '../fiche_logement/fiche';
-
 
 
 function Home() {
@@ -25,39 +18,52 @@ function Home() {
 
       <div className="gallery" id="gallery">
    
+      
+
+{/* const DataComponent = () => {
+  return (
+    <div>
+      {jsonData.map((item) => (
+        <div key={item.id}>
+          <h1>{item.title}</h1>
+          <img src={item.cover} alt={item.title} />
+        </div>
+      ))}
+    </div>
+  );
+}; */}
+<DataComponent/>
 
 
-        <div className="location">
-          <p className="titre">Titre de la location</p>
+{/* const gallery = document.getElementById("gallery"); */}
+{/* 
+{/* //   document.getElementById("gallery").innerHTML = ""; */}
+  
+{/* //   //Boucle pour la création de la galerie */}
+{/* //   for (let item of items) { */}
+{/* //   let location = document.createElement("div");
+//   location.setAttribute("className","location");
+  
+//   let img = document.createElement("img");
+//   img.setAttribute("src", item.cover);
+//   img.setAttribute("alt", item.title);
+//   location.appendChild(img);
+  
+//   let titre = document.createElement("p");
+//   titre.innerHTML = item.title;
+//   titre.setAttribute("className","titre");
+//   location.appendChild(titre);
+//   gallery.appendChild(location); */} 
+
         
-
-        </div>
-        <div className="location">
-          <p className="titre">Titre de la location</p>
-        </div>
-        <div className="location">
-          <p className="titre">Titre de la location</p>
-        </div>
-        <div className="location">
-          <p className="titre">Titre de la location</p>
-        </div>
-        <div className="location">
-          <p className="titre">Titre de la location</p>
-        </div>
-        <div className="location">
-          <p className="titre">Titre de la location</p>
-        </div>
 
       </div>
       </main>
 
-      <DataComponent/>
 
 
 
-    
 
-  {/* pour prévisualisation   */}
 
 <Fiche/>
 
