@@ -5,12 +5,17 @@ import './fiche.css';
 
 import imagelocation from '../../img/carrousel_fiche.png';
 
+import FicheLogement from '../.././composants/fichelogement/fichelogement'
+
 
 
 function Fiche() {
   return (
     
     <>
+
+<FicheLogement/>
+
 
     {/* Première colonne */}
     <div>
@@ -34,6 +39,8 @@ function Fiche() {
     </div>
 
     </div>
+
+    
 
 {/* Deuxième colonne */}
 <div className='colonne_fiche'>

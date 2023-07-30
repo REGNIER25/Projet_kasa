@@ -4,10 +4,12 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
 } from "react-router-dom";
 import Header from '././composants/header/header';
 import Footer from '././composants/footer/footer';
@@ -15,6 +17,8 @@ import Home from '././pages/home/home';
 import Erreur from '././pages/page_erreur/erreur';
 import Fiche from '././pages/fiche_logement/fiche';
 import Apropos from '././pages/page_apropos/apropos';
+
+import FicheLogement from '././composants/fichelogement/fichelogement';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,7 +33,12 @@ root.render(
 
 <Route path='/' element={<Home />}/>
 
-<Route path='/fiche-logement/:id' element={<Fiche />}/>
+
+        <Route path="/fiche-logements/b9123946" element={<FicheLogement />}>
+          
+        </Route>
+      
+
 <Route path='/a-propos' element={<Apropos />}/>
 
 <Route path= "*" element={<Erreur />}/>

@@ -20,7 +20,7 @@
   }
   
   .gallery {
-    height: 830px;
+    height: 100%;
     max-width: 1240px;
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +33,7 @@
     margin-bottom: 20px;
   }
   
-  img {
+  .img-gallery {
     border-radius: 10px;
     width: 340px;
     height: 340px;
@@ -41,10 +41,8 @@
     background: linear-gradient(#FF6060, grey);
   }
 
- 
-  
   .titre {
-    color: white;
+    color: red;
     font-size: 20px;
     display: inline-block;
     vertical-align: bottom;
