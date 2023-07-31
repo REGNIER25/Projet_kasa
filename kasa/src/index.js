@@ -15,9 +15,7 @@ import Header from '././composants/header/header';
 import Footer from '././composants/footer/footer';
 import Home from '././pages/home/home';
 import Erreur from '././pages/page_erreur/erreur';
-import Fiche from '././pages/fiche_logement/fiche';
 import Apropos from '././pages/page_apropos/apropos';
-
 import FicheLogement from '././composants/fichelogement/fichelogement';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -34,7 +32,7 @@ root.render(
 <Route path='/' element={<Home />}/>
 
 
-        <Route path="/fiche-logements/b9123946" element={<FicheLogement />}>
+        <Route path="/fiche-logements/:id" element={<FicheLogement />}>
           
         </Route>
       
