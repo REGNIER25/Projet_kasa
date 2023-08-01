@@ -1,15 +1,28 @@
+// Import des modules nécessaires depuis React
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
+// Import des données de logement à partir d'un fichier JSON
 import data from "../../logements.json";
+
+// Import du composant Collapse personnalisé
 import Collapse from '../../composants/collapse/collapse';
+
+// Import du composant Slideshow personnalisé
 import Slideshow from '../../composants/slideshow/slideshow';
+
+// Import du fichier CSS associé à ce composant
 import './fiche.css';
 
-
+// Définition du composant FicheLogement
 const FicheLogement = () => {
+  // Extraction de l'ID du logement à partir des paramètres d'URL à l'aide de useParams
   const { id } = useParams();
+
+  // Déclaration de l'état local "item" à l'aide de useState, initialement défini à null
   const [item, setItem] = useState(null);
 
+  // Effet de côté pour récupérer les données du logement en fonction de l'ID passé (id)
   useEffect(() => {
     // Trouver l'objet logement dans le fichier JSON avec l'ID correspondant
     const itemTrouve = data.find((item) => item.id === id);
@@ -18,10 +31,8 @@ const FicheLogement = () => {
     setItem(itemTrouve);
   }, [id]);
 
-  console.log(item);
-
+  // Si les données du logement ne sont pas encore chargées, afficher un message de chargement
   if (!item) {
-    console.log(data);
     return <div className="chargement">{id}</div>;
   }
 
@@ -35,138 +46,52 @@ const FicheLogement = () => {
     etoiles.push(<li key={i}>★</li>);
   }
 
+  // Retourne le contenu JSX du composant FicheLogement
   return (
     <div>
-
-      {/* carrousel */}
-      {/* rajouter flèche et le numéro et le nombre total de photos */}
+      {/* Carrousel */}
+      {/* Rajouter flèche et le numéro et le nombre total de photos */}
       <img src={item.pictures} alt={item.title} />
-      <Slideshow/>
-
-
+      <Slideshow />
 
       <div>
-      <h2>{item.title}</h2>
-      <h3>{item.location}</h3>
+        {/* Titre et emplacement du logement */}
+        <h2>{item.title}</h2>
+        <h3>{item.location}</h3>
       </div>
 
+      {/* Tags */}
       <ul className='tag'>
-       <li className='tg'>{item.tags}</li> 
-        </ul>
-    
+        <li className='tg'>{item.tags}</li>
+      </ul>
 
-<div >
-      <p>{item.name}</p>
-      <img className='circle' src={item.picture} alt={item.name} />
+      <div>
+        {/* Nom et image de l'hôte */}
+        <p>{item.name}</p>
+        <img className='circle' src={item.picture} alt={item.name} />
       </div>
 
-      {/* Etoiles */}
+      {/* Étoiles */}
       <ul className='stars'>
-      {etoiles}
-</ul>
-      
-
-
+        {etoiles}
+      </ul>
 
       <div className='valeurs'>
+        {/* Description du logement */}
+        <Collapse title="Description">
+          <p>{item.description}</p>
+        </Collapse>
 
-      <Collapse title="Description">
-      <p>{item.description}</p>
-      </Collapse>
-
-      <Collapse title="Équipement">
-      <ul className = 'js-expandmore'>
-      <li>{item.equipments}</li>
-      </ul>
-     
-      </Collapse>
-
+        {/* Équipements du logement */}
+        <Collapse title="Équipement">
+          <ul className='js-expandmore'>
+            <li>{item.equipments}</li>
+          </ul>
+        </Collapse>
       </div>
-
-
     </div>
   );
 };
 
+// Export du composant FicheLogement pour qu'il puisse être utilisé ailleurs
 export default FicheLogement;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React,{ useEffect } from 'react';
-// import { useParams } from 'react-router-dom';
-// import data from "../../logements.json";
-
-
-// const FicheLogement = () => {
-//   useEffect(() => {
-//     const { id } = useParams();
-//     const item = data.find((item) => item.id === parseInt(id, 10));
-//     const url = window.location.href;
-//     const urlPartsArray = url.split('/').slice(3);
-//     console.log(urlPartsArray);
-//   }, []);
-
-
-
-
-//   if (!item) {console.log(data); 
-//     return <div className="chargement">{ id }</div>
-    
-//     ;
-//   }
-
-//   return (
-    
-//     <div>
-//       <img src={item.pictures} alt={item.title} />
-//       <h2>{item.title}</h2>
-//       <p>{item.location}</p>
-//       <p>{item.name}</p>
-//       <p>{item.picture}</p>
-//       <p>{item.tags}</p>
-//       <p>{item.rating}</p>
-//       <p>{item.description}</p>
-//       <p>{item.equipments}</p>
-      
-//     </div>
-//   );
-// };
-
-// export default FicheLogement;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

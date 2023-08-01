@@ -1,30 +1,46 @@
+// Import des modules nécessaires depuis React
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
+// Import du fichier JSON contenant les données des logements
 import data from "../../logements.json";
+
+// Import du fichier CSS associé à ce composant
 import './datajson.css';
 
+// Définition du composant DataComponent
 const DataComponent = ({ itemId }) => {
-  const [itemData, setItemData] = useState(null);
-  const [urlPartsArray, setUrlPartsArray] = useState([]);
+  // Déclaration de deux états locaux à l'aide de useState
+  const [itemData, setItemData] = useState(null); // Pour stocker les données du logement sélectionné par itemId
+  const [urlPartsArray, setUrlPartsArray] = useState([]); // Pour stocker les parties de l'URL de la page actuelle
 
+  // Effet de côté pour récupérer les données du logement en fonction de l'ID passé (itemId)
   useEffect(() => {
-    console.log(data);
     const item = data.find((item) => item.id === itemId);
     setItemData(item);
   }, [itemId]);
 
+  // Effet de côté pour extraire les parties de l'URL de la page actuelle
   useEffect(() => {
     const url = window.location.href;
     const parts = url.split('/').slice(3);
     setUrlPartsArray(parts);
   }, []);
 
+  // Retourne le contenu JSX du composant DataComponent
   return (
-    <div>
+    <div className="gallery">
+      {/* Boucle sur les données pour afficher chaque logement dans la galerie */}
       {data.map((item) => (
         <Link to={`/fiche-logements/${item.id}`} key={item.id}>
-          <img className="img-gallery" src={item.cover} alt={item.title} />
-          <p className="titre">{item.title}</p>
+          {/* Lien vers la fiche individuelle du logement */}
+          <div className="img-titre-gallery">
+            {/* Image du logement */}
+            <img className="img-gallery" src={item.cover} alt={item.title} />
+            {/* Titre du logement */}
+            <span className="titre">{item.title}</span>
+          </div>
+          {/* Affichage des parties de l'URL de la page actuelle */}
           <p>{urlPartsArray.join('/')}</p>
         </Link>
       ))}
@@ -32,44 +48,5 @@ const DataComponent = ({ itemId }) => {
   );
 };
 
+// Export du composant DataComponent pour qu'il puisse être utilisé ailleurs
 export default DataComponent;
-
-
-
-// import React, { useState, useEffect } from 'react';
-// import data from "../../logements.json";
-// import './datajson.css';
-
-
-// const DataComponent = ({ itemId }) => {
-//   const [itemData, setItemData] = useState(null);
-//   useEffect(() => {
-// console.log(data); 
-//     const item = data.find((item) => item.id === itemId);
-//     setItemData(item);
-//   }, [itemId]);
-
-//   useEffect(() => {
-//     const url = window.location.href;
-//     const urlPartsArray = url.split('/').slice(3);
-//     console.log(urlPartsArray);
-//   }, []);
-
-//   return (
-//       <div>
-//         {data.map((item) => (
-//           <a href="http://localhost:3000/fiche-logements/:id" key={item.id}>
-//             <img  className = "img-gallery" src={item.cover} alt={item.title} />
-//             <p className = "titre">{item.title}</p>
-//             <p>{url}</p>
-//             </a>
-            
-  
-//         ))}
-//       </div>
-//     );
-// }
-
-//   export default DataComponent;
-
-  
