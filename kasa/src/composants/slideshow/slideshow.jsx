@@ -19,10 +19,7 @@ const Slideshow = () => {
   // Déclaration de l'état local "currentSlide" à l'aide de useState, initialement défini à 0
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Si les données du logement ou les images ne sont pas encore chargées, afficher un message de chargement
-  if (!item || !item.pictures || item.pictures.length === 0) {
-    return <div>Chargement...</div>;
-  }
+
 
   // Fonction pour passer à la diapositive suivante
   const nextSlide = () => {
@@ -62,6 +59,7 @@ const Slideshow = () => {
             &#10095;
           </button>
           {/* Affichage des indicateurs de diapositive (points) */}
+          {/* mettre des chiffres */}
           <div className="dots">
             {item.pictures.map((_, index) => (
               <span
@@ -76,5 +74,4 @@ const Slideshow = () => {
   );
 };
 
-// Export du composant Slideshow pour qu'il puisse être utilisé ailleurs
 export default Slideshow;

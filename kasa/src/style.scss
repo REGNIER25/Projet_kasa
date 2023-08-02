@@ -2,8 +2,12 @@
 
 @use "././composants/header/header.scss";
 @use "././composants/footer/footer.scss";
+@use "././composants/fichelogement/fiche.scss";
+@use "././composants/collapse/collapse.scss";
+// @use "././composants/st/collapse.scss";
+
 @use "././pages/home/home.scss";
-@use "././pages/fiche_logement/fiche.scss";
+
 @use "././pages/page_apropos/apropos.scss";
 @use "././pages/page_erreur/erreur.scss";
 

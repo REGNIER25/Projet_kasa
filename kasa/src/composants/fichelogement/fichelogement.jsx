@@ -18,11 +18,11 @@ import './fiche.css';
 const FicheLogement = () => {
   // Extraction de l'ID du logement à partir des paramètres d'URL à l'aide de useParams
   const { id } = useParams();
-
+console.log(id);
   // Déclaration de l'état local "item" à l'aide de useState, initialement défini à null
   const [item, setItem] = useState(null);
 
-  // Effet de côté pour récupérer les données du logement en fonction de l'ID passé (id)
+  // Effet de bord pour récupérer les données du logement en fonction de l'ID passé (id)
   useEffect(() => {
     // Trouver l'objet logement dans le fichier JSON avec l'ID correspondant
     const itemTrouve = data.find((item) => item.id === id);
@@ -51,7 +51,7 @@ const FicheLogement = () => {
     <div>
       {/* Carrousel */}
       {/* Rajouter flèche et le numéro et le nombre total de photos */}
-      <img src={item.pictures} alt={item.title} />
+      {/* <img src={item.pictures} alt={item.title} /> */}
       <Slideshow />
 
       <div>
