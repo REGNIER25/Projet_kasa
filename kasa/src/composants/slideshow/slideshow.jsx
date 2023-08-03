@@ -42,6 +42,9 @@ const Slideshow = () => {
             key={index}
             className={index === currentSlide ? 'slide active' : 'slide'}
           >
+
+
+            
             {/* Image de la diapositive */}
             <img src={picture} alt={`Image ${index + 1}`} />
           </div>
@@ -58,14 +61,15 @@ const Slideshow = () => {
           <button className="next" onClick={nextSlide}>
             &#10095;
           </button>
-          {/* Affichage des indicateurs de diapositive (points) */}
-          {/* mettre des chiffres */}
-          <div className="dots">
+          {/* Affichage des indicateurs de diapositive (numbers) */}
+          <div className="numbers">
             {item.pictures.map((_, index) => (
               <span
                 key={index}
-                className={index === currentSlide ? 'dot active' : 'dot'}
-              ></span>
+                className={index === currentSlide ? 'number active' : 'number'}
+              >
+                {index + 1}
+              </span>
             ))}
           </div>
         </div>

@@ -46,15 +46,20 @@ h2, h3, p {
   color: #FF6060;
 }
 
-.tg {
-  color: #FFFFFF;
-  background-color: #FF6060;
-  list-style-type: none;
+.titre-hote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.colonne_fiche {
+.hote {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.hote p {
+  margin-right: 10px;
+  font-size: 18px;
 }
 
 .circle {
@@ -64,11 +69,30 @@ h2, h3, p {
   border-radius: 50%;
 }
 
-.tag {
-  width: 115px;
-  height: 25px;
-  border-radius: 10px;
+.tags-stars {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.etiquettes {
+  margin-left: 20px;
+}
+
+.tag {
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.tg {
+  color: #FFFFFF;
+  background-color: #FF6060;
+  font-size: 14px;
+  list-style-type: none;
+  text-align: center;
 }
 
 .stars {
@@ -76,35 +100,24 @@ h2, h3, p {
   color: #C4C4C4;
   list-style-type: none;
   font-size: 36px;
+  margin-left: 20px;
 }
 
 .starrose {
   color: #FF6060;
 }
 
-.details {
-  display: inline;
-  float: left;
+.description-equipements .collapse-container {
+  display: flex;
   width: 100%;
+  gap: 20px;
 }
 
-.detail_description, .detail_equipement {
+.description, .equipements {
   width: 50%;
 }
 
-.js-expandmore-title {
-  color: #F6F6F6;
-  background-color: #FF6060;
-  padding-left: 10px;
-  border-radius: 5px;
-  font-size: 24px;
-}
 
-.js-expandmore {
-  padding-left: 15px;
-  color: #FF6060;
-  list-style-type: none;
-} 
 /* Styles pour le composant Collapse */
 .collapse {
   border: 1px solid #ccc;
@@ -362,31 +375,6 @@ h1 {
 
 h2, h3, p {
   color: #FF6060;
-}
-
-.tg {
-  color: #FFFFFF;
-  background-color: #FF6060;
-  list-style-type: none;
-}
-
-.colonne_fiche {
-  display: flex;
-  flex-direction: column;
-}
-
-.circle {
-  background-color: #C4C4C4;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-.tag {
-  width: 115px;
-  height: 25px;
-  border-radius: 10px;
-  display: flex;
 }
 
 .stars {

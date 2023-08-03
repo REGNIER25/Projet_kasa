@@ -51,47 +51,69 @@ console.log(id);
     <div>
       {/* Carrousel */}
       {/* Rajouter flèche et le numéro et le nombre total de photos */}
-      {/* <img src={item.pictures} alt={item.title} /> */}
+    
       <Slideshow />
 
+     <div className='titre-hote'> 
       <div>
         {/* Titre et emplacement du logement */}
         <h2>{item.title}</h2>
         <h3>{item.location}</h3>
       </div>
 
-      {/* Tags */}
-      <ul className='tag'>
-        <li className='tg'>{item.tags}</li>
-      </ul>
-
-      <div>
+      <div className ='hote'>
         {/* Nom et image de l'hôte */}
-        <p>{item.name}</p>
-        <img className='circle' src={item.picture} alt={item.name} />
+        <div>
+        <p>{item.host.name}</p>
+        </div>
+        <div>
+        <img className='circle' src={item.host.picture} alt={item.host.name} />
+        </div>
       </div>
+      </div>
+
+      <div className='tags-stars'>
+
+      {/* Tags */}
+    
+      <ul className='tag'>
+        <li>{item.tags}</li>
+      </ul>
+      
+
+
+      
 
       {/* Étoiles */}
       <ul className='stars'>
         {etoiles}
       </ul>
+      </div>
 
-      <div className='valeurs'>
+  
+
+
+      {/* Collapses */}
+
+      <div className='description-equipements'>
+
         {/* Description du logement */}
-        <Collapse title="Description">
+        <div className='collapse-container'>
+        <Collapse className='description' title="Description">
           <p>{item.description}</p>
         </Collapse>
 
         {/* Équipements du logement */}
-        <Collapse title="Équipement">
+        <Collapse className='equipements' title="Équipement">
           <ul className='js-expandmore'>
             <li>{item.equipments}</li>
           </ul>
         </Collapse>
-      </div>
+    
+    </div>
+    </div>
     </div>
   );
 };
 
-// Export du composant FicheLogement pour qu'il puisse être utilisé ailleurs
 export default FicheLogement;

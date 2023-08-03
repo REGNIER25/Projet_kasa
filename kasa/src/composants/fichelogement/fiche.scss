@@ -1,16 +1,25 @@
 h2, h3, p {
     color: #FF6060;
   }
+
   
-  .tg {
-    color: #FFFFFF;
-    background-color: #FF6060;
-    list-style-type: none;
-  }
+
+
   
-  .colonne_fiche {
+  .titre-hote {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hote {
+    display: flex;
+    align-items: center; 
+  }
+
+  .hote p {
+    margin-right: 10px;
+    font-size: 18px;
   }
   
   .circle {
@@ -19,45 +28,83 @@ h2, h3, p {
     height: 100px;
     border-radius: 50%;
   }
-  
-  .tag {
-    width: 115px;
-    height: 25px;
-    border-radius: 10px;
+
+//tags et étoiles
+
+  .tags-stars {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+
+  //tags
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px; 
+  }
+  
+
+  .tag li {
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    background-color: #FF6060; 
+    color: #FFFFFF;
+    font-size: 14px;
+    list-style-type: none;
+    text-align: center;
+  }
+
+
+  //étoiles
   
   .stars {
     display: flex;
     color: #C4C4C4;
     list-style-type: none;
     font-size: 36px;
+    margin-left: 20px;
   }
+
   
   .starrose {
     color: #FF6060;
   }
-  
-  .details {
-    display: inline;
-    float: left;
+
+
+// Collapses
+
+  .description-equipements .collapse-container {
+    display: flex;
     width: 100%;
+    gap: 20px; 
   }
-  
-  .detail_description, .detail_equipement {
+
+
+  .description, .equipements {
     width: 50%;
   }
   
-  .js-expandmore-title {
-    color: #F6F6F6;
-    background-color: #FF6060;
-    padding-left: 10px;
-    border-radius: 5px;
-    font-size: 24px;
-  }
+  // .details {
+  //   display: inline;
+  //   float: left;
+  //   width: 100%;
+  // }
   
-  .js-expandmore {
-    padding-left: 15px;
-    color: #FF6060;
-    list-style-type: none;
-  }/*# sourceMappingURL=fiche.css.map */
+  
+  
+  // .js-expandmore-title {
+  //   color: #F6F6F6;
+  //   background-color: #FF6060;
+  //   padding-left: 10px;
+  //   border-radius: 5px;
+  //   font-size: 24px;
+  // }
+  
+  // .js-expandmore {
+  //   padding-left: 15px;
+  //   color: #FF6060;
+  //   list-style-type: none;
+  // }
+  /*# sourceMappingURL=fiche.css.map */
