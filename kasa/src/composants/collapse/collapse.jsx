@@ -22,7 +22,7 @@ const Collapse = ({ title, children }) => {
                 {/* Titre du Collapse */}
                 <span className="collapse__title">{title}</span>
                 {/* Icône qui change en fonction de l'état isCollapsed */}
-                <span className={`collapse__icon ${isCollapsed ? 'down' : 'up'}`}> 	Ʌ</span>
+                <span className={`collapse__icon ${isCollapsed ? 'down' : 'up'}`}> 	<i class="fa-solid fa-angle-down"></i></span>
             </button>
             {/* Affiche le contenu (children) seulement si isCollapsed est faux */}
             {!isCollapsed && <div className="collapse__content">{children}</div>}

@@ -33,36 +33,33 @@ h2, h3, p {
 
   .tags-stars {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   //tags
 
   .tag {
     display: inline-flex;
-    align-items: center;
-    margin-right: 10px; 
-  }
-  
-
-  .tag li {
+    // align-items: center;
+    margin-right: 5px; 
     padding: 10px 20px; 
     border-radius: 20px; 
     background-color: #FF6060; 
     color: #FFFFFF;
     font-size: 14px;
-    list-style-type: none;
     text-align: center;
   }
 
 
   //étoiles
+
+  // .stars {
+  // width :50%}
   
-  .stars {
+  .star {
     display: flex;
     color: #C4C4C4;
-    list-style-type: none;
     font-size: 36px;
     margin-left: 20px;
   }
@@ -75,36 +72,21 @@ h2, h3, p {
 
 // Collapses
 
-  .description-equipements .collapse-container {
-    display: flex;
-    width: 100%;
-    gap: 20px; 
-  }
+
+.collapses-container {
+  display: grid;
+/* Divise l'espace en deux colonnes égales */
+  grid-template-columns: 1fr 1fr; 
+  /* Espace entre les collapses*/
+  grid-gap: 20px; 
+}
 
 
-  .description, .equipements {
-    width: 50%;
-  }
+
+.liste-equipements{color: #FF6060;
+  padding: 5px;
+list-style-type: none;}
+
   
-  // .details {
-  //   display: inline;
-  //   float: left;
-  //   width: 100%;
-  // }
-  
-  
-  
-  // .js-expandmore-title {
-  //   color: #F6F6F6;
-  //   background-color: #FF6060;
-  //   padding-left: 10px;
-  //   border-radius: 5px;
-  //   font-size: 24px;
-  // }
-  
-  // .js-expandmore {
-  //   padding-left: 15px;
-  //   color: #FF6060;
-  //   list-style-type: none;
-  // }
+
   /*# sourceMappingURL=fiche.css.map */

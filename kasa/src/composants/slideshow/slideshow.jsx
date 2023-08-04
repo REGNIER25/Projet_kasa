@@ -19,7 +19,12 @@ const Slideshow = () => {
   // Déclaration de l'état local "currentSlide" à l'aide de useState, initialement défini à 0
   const [currentSlide, setCurrentSlide] = useState(0);
 
-
+// Fonction pour afficher le numéro de la photo actuelle
+const getSlideNumberText = () => {
+  const currentNumber = currentSlide + 1;
+  const totalNumber = item.pictures.length;
+  return `${currentNumber}/${totalNumber}`;
+};
 
   // Fonction pour passer à la diapositive suivante
   const nextSlide = () => {
@@ -32,50 +37,47 @@ const Slideshow = () => {
   };
 
   // Retourne le contenu JSX du composant Slideshow
-  return (
-    <div className="slideshow-container">
-      {/* Conteneur pour les diapositives */}
-      <div className="slideshow-slide">
-        {/* Boucle sur les images du logement pour afficher chaque diapositive */}
-        {item.pictures.map((picture, index) => (
-          <div
-            key={index}
-            className={index === currentSlide ? 'slide active' : 'slide'}
-          >
+return (
+  <div className="slideshow-container">
 
+    {/* Conteneur pour les diapositives */}
 
-            
-            {/* Image de la diapositive */}
-            <img src={picture} alt={`Image ${index + 1}`} />
-          </div>
-        ))}
-      </div>
-      {/* Affichage des contrôles du carrousel uniquement s'il y a plus d'une image */}
-      {item.pictures.length > 1 && (
-        <div className="slideshow-controls">
-          {/* Bouton pour passer à la diapositive précédente */}
-          <button className="prev" onClick={prevSlide}>
-            &#10094;
-          </button>
-          {/* Bouton pour passer à la diapositive suivante */}
-          <button className="next" onClick={nextSlide}>
-            &#10095;
-          </button>
-          {/* Affichage des indicateurs de diapositive (numbers) */}
-          <div className="numbers">
-            {item.pictures.map((_, index) => (
-              <span
-                key={index}
-                className={index === currentSlide ? 'number active' : 'number'}
-              >
-                {index + 1}
-              </span>
-            ))}
-          </div>
+    <div className="slideshow-slide">
+      {/* Boucle sur les images du logement pour afficher chaque diapositive */}
+      {item.pictures.map((picture, index) => (
+        <div
+          key={index}
+          className={index === currentSlide ? 'slide active' : 'slide'}
+        >
+
+          {/* Image de la diapositive */}
+          <img src={picture} alt={`Image ${index + 1}`} />
         </div>
-      )}
+      ))}
     </div>
-  );
+
+    {/* Affichage des contrôles du carrousel uniquement s'il y a plus d'une image */}
+    {item.pictures.length > 1 && (
+      <div className="slideshow-controls">
+
+        {/* Bouton pour repasser à la diapositive précédente */}
+        <button className="prev" onClick={prevSlide}>
+          <i className="fa-solid fa-angle-left"></i>
+        </button>
+
+        {/* Bouton pour passer à la diapositive suivante */}
+        <button className="next" onClick={nextSlide}>
+          <i className="fa-solid fa-angle-right"></i>
+        </button>
+
+        {/* Affichage du numéro de la photo actuelle */}
+        <div className="slide-number">
+          {getSlideNumberText()}
+        </div>
+      </div>
+    )}
+  </div>
+);
 };
 
 export default Slideshow;

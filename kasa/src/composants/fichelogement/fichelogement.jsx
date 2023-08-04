@@ -40,10 +40,10 @@ console.log(id);
   const nbEtoiles = Math.min(Math.round(item.rating), 5);
   const etoiles = [];
   for (let i = 0; i < nbEtoiles; i++) {
-    etoiles.push(<li key={i} className='starrose'>★</li>);
+    etoiles.push(<div key={i} className='starrose'>★</div>);
   }
   for (let i = nbEtoiles; i < 5; i++) {
-    etoiles.push(<li key={i}>★</li>);
+    etoiles.push(<div key={i}>★</div>);
   }
 
   // Retourne le contenu JSX du composant FicheLogement
@@ -75,19 +75,23 @@ console.log(id);
       <div className='tags-stars'>
 
       {/* Tags */}
+
+      <div>
     
-      <ul className='tag'>
-        <li>{item.tags}</li>
-      </ul>
-      
+{item.tags.map((tag, index) => (
+  <div key={index} className='tag'>{tag}</div>
+))}
 
-
-      
-
+</div>
+    
       {/* Étoiles */}
-      <ul className='stars'>
+      <div className='stars'>
+      <div className='star'>
         {etoiles}
-      </ul>
+      </div>
+      </div>
+
+
       </div>
 
   
@@ -95,25 +99,29 @@ console.log(id);
 
       {/* Collapses */}
 
-      <div className='description-equipements'>
 
-        {/* Description du logement */}
-        <div className='collapse-container'>
-        <Collapse className='description' title="Description">
+        {/* Conteneur pour les collapses */}
+    <div className="collapses-container">
+      {/* Description du logement */}
+      <div className='description-equipements'>
+        <Collapse className='titre-collapse' title="Description">
           <p>{item.description}</p>
         </Collapse>
+      </div>
 
-        {/* Équipements du logement */}
-        <Collapse className='equipements' title="Équipement">
-          <ul className='js-expandmore'>
-            <li>{item.equipments}</li>
+      {/* Équipements du logement */}
+      <div className='description-equipements'>
+        <Collapse className='titre-collapse' title="Équipement">
+          <ul className='liste-equipements'>
+            {item.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
           </ul>
         </Collapse>
-    
+      </div>
     </div>
-    </div>
-    </div>
-  );
+  </div>
+);
 };
 
 export default FicheLogement;
