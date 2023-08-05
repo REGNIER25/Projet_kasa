@@ -28,35 +28,40 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  justify-content: space-between;
   padding: 10px;
   align-items: center;
 }
 
 .img-titre-gallery {
   position: relative;
-  padding: 10px;
+  padding-left: 25px;
+  padding-right: 20px;
+  padding-top: 20px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
 }
 
 .img-gallery {
-  /* Changer la largeur des éléments pour qu'ils soient côte à côte avec un espace de 20px */
+  /* Largeur des images avec espace*/
   flex-basis: calc(33.333% - 20px);
   width: 300px;
   height: 300px;
-  background: linear-gradient(to bottom, grey);
-  /* Dégradé linéaire de haut en bas */
-  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  background: rgba(223, 8, 8, 0.5); /* Couleur du filtre semi-transparent */
+  /* Dégradé de couleur de haut en bas */
+  background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(212, 16, 16, 0.7)), url("../../img/location.png");
 }
 
 .titre {
   color: #FFFFFF;
   font-size: 15px;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 30px;
+  left: 30px;
   width: 30%;
   font-weight: bold;
+  /* Pour placer le titre au-dessus du filtre */
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }/*# sourceMappingURL=home.css.map */

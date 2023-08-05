@@ -9,8 +9,11 @@ function Home() {
         <p className="slogan">Chez vous, partout et ailleurs</p> {/* Affiche le slogan "Chez vous, partout et ailleurs" dans une div avec la classe CSS "banner" */}
       </div>
 
-      <DataComponent /> {/* Rend le composant DataComponent qui doit afficher des données de logement */}
 
+{/* composant galerie des logements*/}
+      <DataComponent /> 
+  
+      
     </>
   );
 }
