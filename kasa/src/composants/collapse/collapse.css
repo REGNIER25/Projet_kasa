@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Styles pour le composant Collapse */
+/* Style du composant Collapse */
 .collapse {
   border: 1px solid #ccc;
   margin-bottom: 10px;
@@ -20,7 +20,8 @@
 
 .collapse__title {
   flex: 1;
-  pointer-events: none; /* Désactive les événements de clic */
+  pointer-events: none;
+  /* Désactive les événements de clic */
   color: white;
   font-size: 18px;
 }

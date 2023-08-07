@@ -1,88 +1,83 @@
-
 .banner {
-    border-radius: 50px;
-    max-width: 1240px;
-    height: 220px;
-    margin-left: 100px;
-    margin-right: 100px;
-    background-image: url("../../img/banner.png");
-    margin-bottom: 20px;
-  }
-
-  
-  
-  .slogan {
-    font-size: 50px;
-    margin-left: 25%;
-    display: inline-block;
-    vertical-align: middle;
-    color: #FFFFFF;
-  }
-
-  
-  .gallery {
-    height: 100%;
-    max-width: 1240px;
-    margin-left: 100px;
-    margin-right: 100px;
-    background: #F6F6F6;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: flex-start;
-    padding: 10px;
-    align-items: center;
-  }
-
-  
-  .img-titre-gallery {
-    position: relative;
-    padding-left:25px;
-    padding-right:20px;
-    padding-top:20px;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    // background-image: url("../../img/location.png");
-    
-  }
+  border-radius: 50px;
+  max-width: 1240px;
+  height: 220px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-image: url("../../img/banner.png");
+  margin-bottom: 20px;
+}
 
 
-  .img-gallery{
 
-       /* Largeur des images avec espace*/
-    flex-basis: calc(33.333% - 20px);
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    background: rgba(223, 8, 8, 0.5); /* Couleur du filtre semi-transparent */
-    /* Dégradé de couleur de haut en bas */
-    background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(212, 16, 16, 0.7)), url("../../img/location.png");
+.slogan {
+  font-size: 50px;
+  margin-left: 25%;
+  display: inline-block;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+
+
+.gallery {
+  height: 100%;
+  max-width: 1240px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background: #F6F6F6;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px;
+  align-items: center;
+}
+
+
+.img-titre-gallery {
+  position: relative;
+  padding-left: 25px;
+  padding-right: 20px;
+  padding-top: 20px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  // background-image: url("../../img/location.png");
+
+}
+
+
+.img-gallery {
+
+  /* Largeur des images avec espace*/
+  flex-basis: calc(33.333% - 20px);
+
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  // Appliquer un filtre sur les images
+  /* Couleur du filtre semi-transparent */
+  background: rgba(223, 8, 8, 0.5);
+  /* Dégradé de couleur de haut en bas */
+  background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(212, 16, 16, 0.7)), url("../../img/location.png");
   //   background-size: cover;
   // background-position: center;
-  // position: relative;
-  }
-
-
- 
-
-  .titre {
-    color: #FFFFFF;
-    font-size: 15px;
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    width:30%;
-    font-weight: bold;
-    /* Pour placer le titre au-dessus du filtre */
-  z-index: 1; 
-    //pour faire ressortir le titre
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
-  }
-  
+}
 
 
 
 
-
+.titre {
+  color: #FFFFFF;
+  font-size: 15px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 30%;
+  font-weight: bold;
+  /* Pour placer le titre au-dessus du filtre */
+  z-index: 1;
+  //pour faire ressortir le titre
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}

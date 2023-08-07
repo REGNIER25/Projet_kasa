@@ -1,44 +1,45 @@
+/* Style du composant Collapse */
 
-/* Styles pour le composant Collapse */
 .collapse {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .collapse__button {
-    background-color: #FF6060;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    border: none;
-  }
-  
-  .collapse__title {
-    flex: 1;
-    pointer-events: none; /* Désactive les événements de clic */
-    color:white;
-    font-size: 18px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
 
-  }
-  
-  .collapse__icon {
-    font-size: 18px;
-    color:white;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .collapse__icon.down {
-    font-size: 18px;
-    color:white;
-    transform: rotate(180deg);
-  }
-  
-  .collapse__content {
-    padding: 5px;
-    background: #F6F6F6;
-  }
+.collapse__button {
+  background-color: #FF6060;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.collapse__title {
+  flex: 1;
+  pointer-events: none;
+  /* Désactive les événements de clic */
+  color: white;
+  font-size: 18px;
+
+}
+
+.collapse__icon {
+  font-size: 18px;
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+.collapse__icon.down {
+  font-size: 18px;
+  color: white;
+  transform: rotate(180deg);
+}
+
+.collapse__content {
+  padding: 5px;
+  background: #F6F6F6;
+}

@@ -6,7 +6,9 @@ function Home() {
   return (
     <> {/* C'est une syntaxe de fragment, utilisée pour englober plusieurs éléments JSX sans créer d'élément DOM supplémentaire */}
       <div className="banner">
-        <p className="slogan">Chez vous, partout et ailleurs</p> {/* Affiche le slogan "Chez vous, partout et ailleurs" dans une div avec la classe CSS "banner" */}
+
+        <p className="slogan">Chez vous, partout et ailleurs</p> 
+
       </div>
 
 
@@ -18,4 +20,5 @@ function Home() {
   );
 }
 
-export default Home; // Exporte le composant Home pour qu'il puisse être utilisé ailleurs dans l'application
+export default Home; 
+

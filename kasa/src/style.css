@@ -195,6 +195,7 @@ h2, h3, p {
   padding-top: 20px;
   border-radius: 10px;
   background-size: cover;
+  background-position: center;
 }
 
 .img-gallery {
@@ -203,8 +204,9 @@ h2, h3, p {
   width: 300px;
   height: 300px;
   border-radius: 10px;
+  background: rgba(223, 8, 8, 0.5); /* Couleur du filtre semi-transparent */
   /* Dégradé de couleur de haut en bas */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(212, 16, 16, 0.7)), url("../../img/location.png");
+  background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(212, 16, 16, 0.7)), url("../../img/location.png");
 }
 
 .titre {
@@ -215,6 +217,9 @@ h2, h3, p {
   left: 30px;
   width: 30%;
   font-weight: bold;
+  /* Pour placer le titre au-dessus du filtre */
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .bannerapropos {

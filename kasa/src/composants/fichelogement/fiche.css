@@ -1,5 +1,7 @@
 @charset "UTF-8";
-h2, h3, p {
+h2,
+h3,
+p {
   color: #FF6060;
 }
 
@@ -14,9 +16,18 @@ h2, h3, p {
   align-items: center;
 }
 
-.hote p {
-  margin-right: 10px;
+.hote-name {
+  display: flex;
+  flex-direction: column;
+  /* Affiche le nom de l'hôte sur deux lignes */
+  align-items: center;
+  margin-right: 5px;
   font-size: 18px;
+  text-align: end;
+}
+
+.prenom {
+  margin-bottom: 2px;
 }
 
 .circle {

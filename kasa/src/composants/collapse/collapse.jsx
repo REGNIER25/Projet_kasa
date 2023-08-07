@@ -1,4 +1,3 @@
-// Import du fichier CSS associé à ce composant
 import './collapse.css';
 
 // Import des modules nécessaires depuis React

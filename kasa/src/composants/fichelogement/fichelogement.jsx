@@ -14,6 +14,10 @@ import Slideshow from '../../composants/slideshow/slideshow';
 // Import du fichier CSS associé à ce composant
 import './fiche.css';
 
+import Erreur from '../../pages/page_erreur/erreur'; 
+// Importe le composant Erreur qui représente la page d'erreur "404 Not Found" de l'application.
+
+
 // Définition du composant FicheLogement
 const FicheLogement = () => {
   // Extraction de l'ID du logement à partir des paramètres d'URL à l'aide de useParams
@@ -31,10 +35,13 @@ console.log(id);
     setItem(itemTrouve);
   }, [id]);
 
-  // Si les données du logement ne sont pas encore chargées, afficher un message de chargement
+//en cas d'erreur sur l'id
   if (!item) {
-    return <div className="chargement">{id}</div>;
+    return <div>{<Erreur />}</div>;
   }
+
+  // Séparer le nom et le prénom
+  const [firstName, lastName] = item.host.name.split(' ');
 
   // Générer les étoiles en fonction du nombre de rating
   const nbEtoiles = Math.min(Math.round(item.rating), 5);
@@ -49,8 +56,6 @@ console.log(id);
   // Retourne le contenu JSX du composant FicheLogement
   return (
     <div>
-      {/* Carrousel */}
-      {/* Rajouter flèche et le numéro et le nombre total de photos */}
     
       <Slideshow />
 
@@ -61,15 +66,22 @@ console.log(id);
         <h3>{item.location}</h3>
       </div>
 
+       {/* Nom et image de l'hôte */}
+
       <div className ='hote'>
-        {/* Nom et image de l'hôte */}
-        <div>
-        <p>{item.host.name}</p>
-        </div>
+       
+{/* Prénom de l'hôte */}
+<div className='hote-name'>
+    <p className='prenom'>{firstName}</p>
+  {/* Nom de l'hôte */}
+    <p>{lastName}</p>
+  </div>
+
         <div>
         <img className='circle' src={item.host.picture} alt={item.host.name} />
         </div>
       </div>
+
       </div>
 
       <div className='tags-stars'>
