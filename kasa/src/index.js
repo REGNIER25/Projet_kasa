@@ -1,6 +1,8 @@
 import React from 'react'; // Importe le module React pour utiliser les fonctionnalités de React dans le fichier.
 import ReactDOM from 'react-dom/client'; // Importe le module ReactDOM pour interagir avec le DOM (Document Object Model) et rendre les composants React dans l'application.
-import './index.css'; // Importe les styles CSS globaux pour l'application. Ces styles seront appliqués sur toutes les pages de l'application.
+
+import './index.css'; 
+
 // import App from './App'; // Importe le composant App, mais il est actuellement en commentaire et n'est pas utilisé dans le code.
 import reportWebVitals from './reportWebVitals'; // Importe le module reportWebVitals qui permet de mesurer les performances de l'application et de signaler les résultats au serveur de collecte d'analyses.
 
@@ -19,7 +21,7 @@ import Footer from '././composants/footer/footer';
 import Home from '././pages/home/home';
 import Erreur from '././pages/page_erreur/erreur';
 import Apropos from '././pages/page_apropos/apropos';
-import FicheLogement from '././composants/fichelogement/fichelogement';
+import FicheLogement from '././pages/fichelogement/fichelogement';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Crée un point d'entrée de rendu dans l'application React. Cela permet de définir où les composants React seront rendus dans le DOM. Dans ce cas, le point d'entrée est l'élément avec l'ID "root" dans le document HTML.

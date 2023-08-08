@@ -1,12 +1,27 @@
 .bannerapropos {
     width: 1240px;
-    height: 223px;
-    margin-left: 100px;
-    margin-right: 100px;
+    height: 220px;
+    margin-left: 10px;
+    margin-right: auto;
     border-radius: 25px;
     margin-bottom: 20px;
     background-image: url("../../img/banner_apropos.png");
+    position: relative;
 }
+
+  
+  .bannerapropos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Opacité (noir) */
+    mix-blend-mode: darken; /* Effet de fusion darken */
+    border-radius: 25px;
+  }
+
 
 .valeurs {
 
@@ -26,4 +41,30 @@
     padding-left: 10px;
     border-radius: 5px;
     font-size: 24px;
+}
+
+//version responsive
+@media (max-width: 768px) {
+
+    .page-apropos{margin-left: 40px; 
+    }
+
+    .bannerapropos {
+        width: 335px;
+        height: 220px;
+        border-radius: 10px; 
+        
+    }
+
+    .valeurs {
+        width: 335px;
+        margin-left: 10px; /* Ajuster la marge */
+        margin-right: 10px; /* Ajuster la marge */
+        padding: 5px;
+    }
+
+    .valeur {
+        font-size: 16px; 
+        margin-bottom: 5px;
+    }
 }

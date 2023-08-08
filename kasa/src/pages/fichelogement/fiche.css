@@ -1,4 +1,10 @@
 @charset "UTF-8";
+.fiche {
+  max-width: 1240px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 h2,
 h3,
 p {
@@ -14,6 +20,10 @@ p {
 .hote {
   display: flex;
   align-items: center;
+}
+
+.hote-mobile {
+  display: none;
 }
 
 .hote-name {
@@ -79,4 +89,56 @@ p {
   list-style-type: none;
 }
 
-/*# sourceMappingURL=fiche.css.map */
+@media (max-width: 768px) {
+  .fiche {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .hote {
+    display: none;
+  }
+  .hote-mobile {
+    display: block;
+    display: flex;
+    align-items: center;
+    margin-top: -40px;
+    margin-left: 300px;
+  }
+  .hote-name {
+    font-size: 15px;
+  }
+  .circle {
+    width: 55px;
+    height: 55px;
+  }
+  .tags-stars {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ligne-tags {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .tag {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .stars {
+    margin-right: 240px;
+    width: 50%;
+  }
+  .star {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  .collapses-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .collapse-title {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=fiche.css.map */

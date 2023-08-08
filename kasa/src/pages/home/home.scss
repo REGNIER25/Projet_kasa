@@ -1,14 +1,28 @@
 .banner {
   border-radius: 50px;
+  justify-content: center;
   max-width: 1240px;
   height: 220px;
   margin-left: 100px;
   margin-right: 100px;
   background-image: url("../../img/banner.png");
   margin-bottom: 20px;
+  position: relative;
 }
 
-
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Opacité (noir) */
+  mix-blend-mode: darken;
+  /* Effet de fusion darken */
+  border-radius: 50px;
+}
 
 .slogan {
   font-size: 50px;
@@ -16,6 +30,8 @@
   display: inline-block;
   vertical-align: middle;
   color: #FFFFFF;
+  //pour faire ressortir le slogan
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 
@@ -80,4 +96,40 @@
   z-index: 1;
   //pour faire ressortir le titre
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+//version responsive
+@media (max-width: 768px) {
+  .banner {
+    width: 335px;
+    height: 110px;
+    margin: 0 auto;
+    /* Marge automatique sur les côtés pour centrer horizontalement */
+  }
+
+  .slogan {
+    width: 215px;
+    font-size: 24px;
+    margin-left: 5%;
+  }
+
+  .gallery {
+    margin: 0 auto;
+    margin-left: 5%;
+    padding: 5px;
+  }
+
+  .img-gallery {
+    flex-basis: calc(50% - 5px);
+    /* Ajuster la largeur des images */
+    width: 335px;
+    height: 255px;
+  }
+
+  .titre {
+    font-size: 15px;
+    bottom: 30px;
+    left: 30px;
+    width: 30%;
+  }
 }

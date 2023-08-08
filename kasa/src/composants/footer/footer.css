@@ -7,9 +7,16 @@
   font-size: 25px;
   color: white;
   height: 210px;
-  width: 1440px;
+  max-width: 1440px;
 }
 
 .rights {
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .rights {
+    width: 130px;
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=footer.css.map */

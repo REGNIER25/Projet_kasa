@@ -27,41 +27,66 @@
   position: absolute;
 }
 
-/* Contrôles du Slideshow au dessus de l'image*/
+/* Contrôles du Slideshow au-dessus de l'image */
 .slideshow-controls {
   position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  /* Pour espacer les flèches sur les côtés */
   bottom: 20px;
-  left: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  /* Centrer horizontalement */
 }
 
-/* Flèches de navigation */
-button {
+/* Flèche de gauche */
+.prev {
   background: transparent;
   border: none;
   cursor: pointer;
+  margin-bottom: 70px;
+  margin-right: 850px;
 }
 
-.fa-angle-left, .fa-angle-right {
-  color: blue;
+/* Flèche de droite */
+.next {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 70px;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+  color: white;
   font-size: 140px;
 }
 
 /* Numérotation */
-.numbers {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.number {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #C4C4C4;
-  color: #FFF;
+.slide-number {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 5px;
-  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .slideshow-slide {
+    height: 250px;
+  }
+  .prev {
+    margin-right: 285px;
+  }
+  .fa-angle-left,
+  .fa-angle-right {
+    font-size: 80px;
+    margin-top: 60px;
+  }
+  .slide-number {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=Slideshow.css.map */

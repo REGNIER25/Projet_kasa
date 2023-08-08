@@ -1,15 +1,24 @@
 .footer {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    color: white;
-    height: 210px;
-    width: 1440px;
-  }
-  
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: white;
+  height: 210px;
+  max-width: 1440px;
+}
+
+.rights {
+  margin-top: 20px;
+}
+
+//version responsive
+@media (max-width: 768px) {
+
   .rights {
-    margin-top: 20px;
+    width: 130px;
+    font-size: 12px;
   }
+}

@@ -22,3 +22,22 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
 }
+
+//version responsive
+
+@media (max-width: 768px) {
+    h1 {
+      font-size: 95px;
+      margin-bottom: 60px;
+    }
+  
+    .texte_erreur {
+      font-size: 20px;
+      margin-bottom: 60px;
+    }
+  
+    .lien_accueil {
+      font-size: 15px; 
+      margin-bottom: 60px;
+    }
+  }

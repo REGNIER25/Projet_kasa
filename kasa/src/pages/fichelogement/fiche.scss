@@ -1,3 +1,8 @@
+.fiche {max-width : 1240px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 h2,
 h3,
 p {
@@ -15,6 +20,8 @@ p {
   align-items: center;
 }
 
+.hote-mobile {display:none;}
+
 .hote-name {
   display: flex;
   flex-direction: column;
@@ -29,6 +36,7 @@ p {
   margin-bottom: 2px;
 }
 
+//cercle photo
 .circle {
   background-color: #C4C4C4;
   width: 100px;
@@ -61,8 +69,6 @@ p {
 
 //étoiles
 
-// .stars {
-// width :50%}
 
 .star {
   display: flex;
@@ -94,6 +100,70 @@ p {
   list-style-type: none;
 }
 
+//version responsive
+@media (max-width: 768px) {
+  .fiche {
+    margin-left: 10px; 
+    margin-right: 10px; 
+  }
+
+  //retirer hote desktop et mettre hote-mobile à la place
+  .hote {display:none;}
+  .hote-mobile {display:block;
+    display: flex;
+    align-items: center;
+    margin-top: -40px;
+    margin-left: 300px;
+  }
+
+  .hote-name {
+    font-size: 15px;
+  }
+
+  .circle {
+    width: 55px; 
+    height: 55px; 
+  }
+
+  .tags-stars {
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center; 
+  }
+
+  //tags en mobile sur une ligne
+
+  .ligne-tags{width:100%;
+    margin-bottom: 10px;
+  }
+  .tag {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+//mettre les étoiles sur la gauche avec l'hôte en face
+
+.stars{ margin-right :240px;
+width:50%;
+}
+
+  .star {
+   
+    font-size: 24px; 
+    margin-top: 0; 
+  }
+
+  //collapses en mobile
+
+  .collapses-container {
+    display: flex;
+    flex-direction: column;
+    margin-top :30px;
+    margin-bottom :30px;
+
+}
+.collapse-title{font-size:15px;}
+
+}
 
 
-/*# sourceMappingURL=fiche.css.map */

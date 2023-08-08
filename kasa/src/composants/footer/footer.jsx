@@ -19,5 +19,4 @@ function Footer() {
   );
 }
 
-// Export du composant Footer pour qu'il puisse être utilisé ailleurs
 export default Footer;

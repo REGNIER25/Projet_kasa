@@ -1,4 +1,3 @@
-
 /* Conteneur du Slideshow */
 .slideshow-container {
   position: relative;
@@ -29,46 +28,76 @@
   position: absolute;
 }
 
-/* Contrôles du Slideshow au dessus de l'image*/
+/* Contrôles du Slideshow au-dessus de l'image */
 .slideshow-controls {
   position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  /* Pour espacer les flèches sur les côtés */
   bottom: 20px;
-  left: 50%;
-  // transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  /* Centrer horizontalement */
 }
 
-/* Flèches de navigation */
-button {
+/* Flèche de gauche */
+.prev {
   background: transparent;
   border: none;
-  // font-size: 24px;
   cursor: pointer;
-  // margin: 0 10px;
+  margin-bottom: 70px;
+  margin-right: 850px;
+
 }
 
-// Flèches
+/* Flèche de droite */
+.next {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 70px;
+}
 
-.fa-angle-left, .fa-angle-right {color:blue;
-font-size : 140px;
+
+.fa-angle-left,
+.fa-angle-right {
+  color: white;
+  font-size: 140px;
 }
 
 /* Numérotation */
-.numbers {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
 
-.number {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #C4C4C4;
-  color: #FFF;
+.slide-number {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-right: 5px;
-  cursor: pointer;
+  justify-content: center
 }
 
+// Version responsive
+
+@media (max-width: 768px) {
+  .slideshow-slide {
+    height: 250px;
+  }
+
+  .prev {
+    margin-right: 285px;
+
+  }
+
+
+  .fa-angle-left,
+  .fa-angle-right {
+    font-size: 80px;
+    margin-top: 60px;
+  }
+
+  .slide-number {
+    font-size: 16px;
+  }
+}

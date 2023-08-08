@@ -5,16 +5,14 @@ import { useParams } from 'react-router-dom';
 // Import des données de logement à partir d'un fichier JSON
 import data from "../../logements.json";
 
-// Import du composant Collapse personnalisé
+// Imports des composants
 import Collapse from '../../composants/collapse/collapse';
-
-// Import du composant Slideshow personnalisé
 import Slideshow from '../../composants/slideshow/slideshow';
 
 // Import du fichier CSS associé à ce composant
 import './fiche.css';
 
-import Erreur from '../../pages/page_erreur/erreur'; 
+import Erreur from '../page_erreur/erreur'; 
 // Importe le composant Erreur qui représente la page d'erreur "404 Not Found" de l'application.
 
 
@@ -55,7 +53,7 @@ console.log(id);
 
   // Retourne le contenu JSX du composant FicheLogement
   return (
-    <div>
+    <div className='fiche'>
     
       <Slideshow />
 
@@ -88,7 +86,7 @@ console.log(id);
 
       {/* Tags */}
 
-      <div>
+      <div className='ligne-tags'>
     
 {item.tags.map((tag, index) => (
   <div key={index} className='tag'>{tag}</div>
@@ -101,6 +99,19 @@ console.log(id);
       <div className='star'>
         {etoiles}
       </div>
+      </div>
+
+      {/* Nom et image de l'hôte pour la version mobile*/}
+      <div className ='hote-mobile'>
+{/* Prénom de l'hôte */}
+<div className='hote-name'>
+    <p className='prenom'>{firstName}</p>
+  {/* Nom de l'hôte */}
+    <p>{lastName}</p>
+  </div>
+        <div>
+        <img className='circle' src={item.host.picture} alt={item.host.name} />
+        </div>
       </div>
 
 

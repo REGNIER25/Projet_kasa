@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-// Import du fichier JSON contenant les données des logements
+// Import des données du fichier JSON
 import data from "../../logements.json";
 
 // Définition du composant DataComponent
