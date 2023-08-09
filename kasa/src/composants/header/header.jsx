@@ -18,12 +18,12 @@ function Header() {
       {/* Barre de navigation avec les liens de navigation */}
       <nav className="nav">
         {/* Lien de navigation vers la page d'accueil avec activeClassName pour ajouter une classe si le lien est actif */}
-        <NavLink className="navbar-item" to="/" exact>
+        <NavLink className="navbar-item" to="/">
           Accueil
         </NavLink>
 
         {/* Lien de navigation vers la page "À propos" avec activeClassName pour ajouter une classe si le lien est actif */}
-        <NavLink className="navbar-item" to="/a-propos" exact>
+        <NavLink className="navbar-item" to="/a-propos">
           A propos
         </NavLink>
       </nav>

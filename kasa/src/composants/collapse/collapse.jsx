@@ -25,7 +25,7 @@ const Collapse = ({ title, children }) => {
     {/* Icône de la flèche */}
 
   <span className={`collapse__icon ${isCollapsed ? 'down' : 'up'}`}> 	
-<i class="fa-solid fa-angle-down"></i></span>
+<i className="fa-solid fa-angle-down"></i></span>
 
 </button>
 

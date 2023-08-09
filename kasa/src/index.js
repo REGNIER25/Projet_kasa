@@ -33,11 +33,16 @@ root.render(
 
       <Routes>
 
-        <Route path='/' element={<Home />} /> {/* Définit la route pour la page d'accueil. Lorsque l'URL correspond à "/", le composant Home est rendu. */}
-        <Route path="/fiche-logements/:id" element={<FicheLogement />}> {/* Définit la route pour les fiches de logement. Lorsque l'URL correspond à "/fiche-logements/:id" (où ":id" est un paramètre dynamique), le composant FicheLogement est rendu. */}
+        <Route path='/' element={<Home />} /> 
+        {/* Définit la route pour la page d'accueil. Lorsque l'URL correspond à "/", le composant Home est rendu. */}
+        <Route path="/fiche-logements/:id" element={<FicheLogement />}> 
+        {/* Définit la route pour les fiches de logement. Lorsque l'URL correspond à "/fiche-logements/:id" (où ":id" est un paramètre dynamique), le composant FicheLogement est rendu. */}
         </Route>
-        <Route path='/a-propos' element={<Apropos />} /> {/* Définit la route pour la page "À propos". Lorsque l'URL correspond à "/a-propos", le composant Apropos est rendu. */}
-        <Route path="*" element={<Erreur />} /> {/* Définit une route par défaut pour gérer toutes les autres URL qui ne correspondent à aucune des routes précédentes. Lorsque l'URL ne correspond à aucune des routes définies, le composant Erreur est rendu, indiquant une erreur de type "Page not found" (404). */}
+        
+        <Route path='/a-propos' element={<Apropos />} /> 
+        {/* Définit la route pour la page "À propos". Lorsque l'URL correspond à "/a-propos", le composant Apropos est rendu. */}
+        <Route path="*" element={<Erreur />} /> 
+        {/* Définit une route par défaut pour gérer toutes les autres URL qui ne correspondent à aucune des routes précédentes. Lorsque l'URL ne correspond à aucune des routes définies, le composant Erreur est rendu, indiquant une erreur de type "Page not found" (404). */}
       </Routes>
 
       <Footer />

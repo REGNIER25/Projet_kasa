@@ -33,7 +33,7 @@ console.log(id);
     setItem(itemTrouve);
   }, [id]);
 
-//en cas d'erreur sur l'id
+// en cas d'erreur sur l'id = redirection vers la "page" erreur
   if (!item) {
     return <div>{<Erreur />}</div>;
   }
