@@ -1,3 +1,5 @@
+/* Style du composant Slideshow */
+
 /* Conteneur du Slideshow */
 .slideshow-container {
   position: relative;
@@ -14,6 +16,23 @@
   transition: transform 0.5s ease-in-out;
 }
 
+// //animation CSS
+
+
+// .collapse__content-animate {
+//   animation: slideInOut 2.0s ease-in-out;
+// }
+
+// /* Animation pour l'ouverture */
+// @keyframes slideInOut {
+//   0% {
+//     max-height: 0;
+//   }
+//   100% {
+//     max-height: 500px;
+//   }
+// }
+
 
 /* Chaque slide */
 .slide {
@@ -27,6 +46,8 @@
   opacity: 1;
   position: absolute;
 }
+
+
 
 /* Contrôles du Slideshow au-dessus de l'image */
 .slideshow-controls {
@@ -64,7 +85,7 @@
 .fa-angle-right {
   color: white;
   font-size: 140px;
-}
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);}
 
 /* Numérotation */
 
@@ -75,7 +96,8 @@
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 // Version responsive

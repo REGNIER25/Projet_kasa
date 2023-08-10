@@ -18,6 +18,7 @@ const DataComponent = ({ itemId }) => {
         <Link to={`/fiche-logements/${item.id}`} key={item.id}>
           <div className="img-titre-gallery">
             <img className="img-gallery" src={item.cover} alt={item.title} />
+            <div className="filtre"></div>
             <span className="titre">{item.title}</span>
           </div>
         </Link>

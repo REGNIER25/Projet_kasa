@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Style de la page fichelogement */
 .fiche {
   max-width: 1240px;
   margin-left: 100px;
@@ -29,21 +30,19 @@ p {
 .hote-name {
   display: flex;
   flex-direction: column;
-  /* Affiche le nom de l'hôte sur deux lignes */
-  align-items: center;
-  margin-right: 5px;
+  margin-right: 15px;
   font-size: 18px;
-  text-align: end;
+  text-align: right;
 }
 
 .prenom {
-  margin-bottom: 2px;
+  margin-bottom: 0px;
 }
 
 .circle {
   background-color: #C4C4C4;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
 }
 
@@ -51,6 +50,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .tag {
@@ -108,8 +108,8 @@ p {
     font-size: 15px;
   }
   .circle {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
   }
   .tags-stars {
     flex-direction: column;

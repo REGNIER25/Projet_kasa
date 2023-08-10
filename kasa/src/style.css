@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Style d'origine la page index */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Montserrat", sans-serif;
@@ -10,6 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+/* Style du composant header */
 .header {
   max-width: 1240px;
   margin-left: 100px;
@@ -54,6 +56,7 @@ code {
     height: 45px;
   }
 }
+/* Style du composant footer */
 .footer {
   background-color: black;
   display: flex;
@@ -83,7 +86,7 @@ code {
   border-radius: 4px;
   overflow: hidden;
   pointer-events: none;
-  cursor: none;
+  cursor: pointer;
 }
 
 .collapse__button {
@@ -98,9 +101,9 @@ code {
 
 .collapse-title {
   flex: 1;
+  /* Désactive les événements de clic */
   pointer-events: none;
   cursor: none;
-  /* Désactive les événements de clic */
   color: white;
   font-size: 18px;
 }
@@ -109,8 +112,10 @@ code {
   font-size: 18px;
   color: white;
   transition: transform 0.2s ease-in-out;
-  cursor: pointer; /* Rend la flèche cliquable */
-  pointer-events: auto; /* Réactive les événements de pointeur pour la flèche */
+  /* Rend la flèche cliquable */
+  cursor: pointer;
+  /* Réactive les événements de pointeur pour la flèche */
+  pointer-events: auto;
 }
 
 .collapse__icon.down {
@@ -121,10 +126,25 @@ code {
 
 .collapse__content {
   padding: 5px;
+  overflow: hidden;
   background: #F6F6F6;
   margin-left: 10px;
 }
 
+.collapse__content-animate {
+  animation: slideInOut 2s ease-in-out;
+}
+
+/* Animation pour l'ouverture */
+@keyframes slideInOut {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 500px;
+  }
+}
+/* Style du composant Slideshow */
 /* Conteneur du Slideshow */
 .slideshow-container {
   position: relative;
@@ -216,6 +236,7 @@ code {
     font-size: 16px;
   }
 }
+/* Style de la page fichelogement */
 .fiche {
   max-width: 1240px;
   margin-left: 100px;
@@ -359,6 +380,7 @@ p {
     font-size: 15px;
   }
 }
+/* Style de la page home */
 .banner {
   border-radius: 50px;
   justify-content: center;
@@ -425,10 +447,20 @@ p {
   width: 300px;
   height: 300px;
   border-radius: 10px;
-  /* Couleur du filtre semi-transparent */
-  background: rgba(223, 8, 8, 0.5);
-  /* Dégradé de couleur de haut en bas */
-  background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(212, 16, 16, 0.7)), url("../../img/location.png");
+  position: relative;
+}
+
+.filtre {
+  top: 19px;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(to bottom, #FFFFFF 0%, #000000 50%);
+  /* Ajustez les couleurs et les opacités */
+  opacity: 0.5;
+  z-index: 1;
 }
 
 .titre {
@@ -440,8 +472,7 @@ p {
   width: 30%;
   font-weight: bold;
   /* Pour placer le titre au-dessus du filtre */
-  z-index: 1;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -474,6 +505,7 @@ p {
     width: 30%;
   }
 }
+/* Style de la page apropos */
 .bannerapropos {
   width: 1240px;
   height: 220px;
@@ -536,6 +568,7 @@ p {
     margin-bottom: 5px;
   }
 }
+/* Style de la page erreur */
 h1 {
   color: #FF6060;
   text-align: center;

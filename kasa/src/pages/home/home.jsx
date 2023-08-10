@@ -1,4 +1,4 @@
-import './home.css'; // Importe les styles CSS spécifiques pour la page d'accueil
+import './home.css'; 
 
 import DataComponent from '../.././composants/datajson/datajson'; // Importe le composant DataComponent depuis le chemin spécifié
 

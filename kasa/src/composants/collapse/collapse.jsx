@@ -14,8 +14,13 @@ const Collapse = ({ title, children }) => {
         setIsCollapsed(!isCollapsed);
     };
 
+    
+
 
     return (
+
+
+
         <div className="collapse">
 
 <button onClick={toggleCollapse} className="collapse__button">
@@ -30,7 +35,9 @@ const Collapse = ({ title, children }) => {
 </button>
 
  {/* Affiche le contenu (children) seulement si isCollapsed est faux */}
-{!isCollapsed && <div className="collapse__content">{children}</div>} 
+{!isCollapsed && <div className="collapse__content collapse__content-animate">{children}</div>} 
+
+
 
 
             

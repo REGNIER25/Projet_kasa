@@ -6,7 +6,7 @@
   border-radius: 4px;
   overflow: hidden;
   pointer-events: none;
-  cursor: none;
+  cursor: pointer;
 }
 
 .collapse__button {
@@ -21,9 +21,9 @@
 
 .collapse-title {
   flex: 1;
+  /* Désactive les événements de clic */
   pointer-events: none;
   cursor: none;
-  /* Désactive les événements de clic */
   color: white;
   font-size: 18px;
 }
@@ -32,8 +32,10 @@
   font-size: 18px;
   color: white;
   transition: transform 0.2s ease-in-out;
-  cursor: pointer; /* Rend la flèche cliquable */
-  pointer-events: auto; /* Réactive les événements de pointeur pour la flèche */
+  /* Rend la flèche cliquable */
+  cursor: pointer;
+  /* Réactive les événements de pointeur pour la flèche */
+  pointer-events: auto;
 }
 
 .collapse__icon.down {
@@ -44,6 +46,21 @@
 
 .collapse__content {
   padding: 5px;
+  overflow: hidden;
   background: #F6F6F6;
   margin-left: 10px;
+}
+
+.collapse__content-animate {
+  animation: slideInOut 2s ease-in-out;
+}
+
+/* Animation pour l'ouverture */
+@keyframes slideInOut {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 500px;
+  }
 }/*# sourceMappingURL=collapse.css.map */

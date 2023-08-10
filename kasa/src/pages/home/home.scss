@@ -1,3 +1,6 @@
+/* Style de la page home */
+
+
 .banner {
   border-radius: 50px;
   justify-content: center;
@@ -59,29 +62,31 @@
   border-radius: 10px;
   background-size: cover;
   background-position: center;
-  // background-image: url("../../img/location.png");
-
 }
 
-
 .img-gallery {
-  // https://developer.mozilla.org/fr/docs/Web/CSS/gradient/linear-gradient
-  /* Largeur des images avec espace*/
-  flex-basis: calc(33.333% - 20px);
+    /* Largeur des images avec espace*/
 
+  flex-basis: calc(33.333% - 20px);
   width: 300px;
   height: 300px;
   border-radius: 10px;
-  // Appliquer un filtre sur les images
-  /* Couleur du filtre semi-transparent */
-  background: rgba(223, 8, 8, 0.5);
-  /* Dégradé de couleur de haut en bas */
-  background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(212, 16, 16, 0.7)), url("../../img/location.png");
-  //   background-size: cover;
-  // background-position: center;
+  position: relative;
 }
 
-
+.filtre {
+  top: 19px;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 10px;
+  // du plus clair (en haut) au plus foncé (en bas)
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(to bottom, #FFFFFF 0%, #000000 50% );
+    /* Ajustez les couleurs et les opacités */
+  opacity: 0.5;
+  z-index: 1;
+}
 
 
 .titre {
@@ -93,9 +98,9 @@
   width: 30%;
   font-weight: bold;
   /* Pour placer le titre au-dessus du filtre */
-  z-index: 1;
+  z-index: 2;
   //pour faire ressortir le titre
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
 //version responsive
@@ -124,6 +129,21 @@
     /* Ajuster la largeur des images */
     width: 335px;
     height: 255px;
+    
+  }
+
+  .filtre {
+    top: 19px;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 10px;
+    // du plus clair (en haut) au plus foncé (en bas)
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(to bottom, #FFFFFF 0%, #000000 50% );
+      /* Ajustez les couleurs et les opacités */
+    opacity: 0.5;
+    z-index: 1;
   }
 
   .titre {
