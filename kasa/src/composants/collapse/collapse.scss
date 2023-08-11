@@ -54,17 +54,19 @@
 .collapse__content {
   padding: 5px;
   overflow: hidden;
-  background: #F6F6F6;
-  margin-left: 10px;
+  background-color: #F6F6F6;
 
 
 }
+
+.collapse__content p{margin-left:10px;}
 
 //animation CSS
 
 
 .collapse__content-animate {
   animation: slideInOut 2.0s ease-in-out;
+
 }
 
 /* Animation pour l'ouverture */
@@ -78,13 +80,7 @@
   }
 }
 
-
-
-// /* Animation pour la fermeture */
-
-// .collapse__content-animate {
-//   animation: slideOutIn 2.0s ease-out-in;
-// }
+/* Animation pour la fermeture */
 // @keyframes slideOutIn {
 //   0% {
 //     max-height: 500px;
@@ -93,3 +89,9 @@
 //     max-height: 0;
 //   }
 // }
+
+// /* Appliquer l'animation à la fermeture */
+// .closing {
+//   animation: slideOutIn 2.0s ease-out-in;
+// }
+

@@ -54,6 +54,7 @@ const Slideshow = () => {
           </div>
         ))}
       </div>
+      
 
       {/* Affichage des contrôles du carrousel uniquement s'il y a plus d'une image */}
       {item.pictures.length > 1 && (

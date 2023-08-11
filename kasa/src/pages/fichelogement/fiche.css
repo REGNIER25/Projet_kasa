@@ -36,7 +36,7 @@ p {
 }
 
 .prenom {
-  margin-bottom: 0px;
+  margin-bottom: -10px;
 }
 
 .circle {
@@ -129,8 +129,7 @@ p {
     width: 50%;
   }
   .star {
-    font-size: 24px;
-    margin-top: 0;
+    font-size: 30px;
   }
   .collapses-container {
     display: flex;

@@ -6,7 +6,7 @@ function Home() {
   return (
     <> {/* C'est une syntaxe de fragment, utilisée pour englober plusieurs éléments JSX sans créer d'élément DOM supplémentaire */}
       <div className="banner">
-
+<div className='filtrebanner'></div>
         <p className="slogan">Chez vous, partout et ailleurs</p> 
 
       </div>

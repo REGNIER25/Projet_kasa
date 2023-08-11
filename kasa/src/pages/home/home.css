@@ -1,8 +1,9 @@
 @charset "UTF-8";
 /* Style de la page home */
 .banner {
-  border-radius: 50px;
+  border-radius: 25px;
   justify-content: center;
+  text-align: center;
   max-width: 1240px;
   height: 220px;
   margin-left: 100px;
@@ -12,27 +13,25 @@
   position: relative;
 }
 
-.banner::before {
-  content: "";
+.filtrebanner {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  /* Opacité (noir) */
-  mix-blend-mode: darken;
-  /* Effet de fusion darken */
-  border-radius: 50px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .slogan {
   font-size: 50px;
-  margin-left: 25%;
   display: inline-block;
-  vertical-align: middle;
-  color: #FFFFFF;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 2;
+  font-weight: bold;
+  position: relative;
+  margin-top: 70px;
 }
 
 .gallery {
@@ -75,10 +74,9 @@
   height: 300px;
   position: absolute;
   border-radius: 10px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background: linear-gradient(to bottom, #FFFFFF 0%, #000000 50%);
+  background: linear-gradient(to bottom, white 0%, black 100%);
   /* Ajustez les couleurs et les opacités */
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: 1;
 }
 
@@ -96,35 +94,42 @@
 
 @media (max-width: 768px) {
   .banner {
+    border-radius: 10px;
+    text-align: left;
     width: 335px;
     height: 110px;
-    margin: 0 auto;
     /* Marge automatique sur les côtés pour centrer horizontalement */
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+  .filtrebanner {
+    border-radius: 10px;
   }
   .slogan {
-    width: 215px;
+    width: 230px;
+    height: 30px;
     font-size: 24px;
-    margin-left: 5%;
+    margin-left: 10px;
+    margin-top: 15px;
   }
   .gallery {
     margin: 0 auto;
     margin-left: 5%;
     padding: 5px;
+    background: WHITE;
   }
   .img-gallery {
     flex-basis: calc(50% - 5px);
-    /* Ajuster la largeur des images */
     width: 335px;
     height: 255px;
+    border-radius: 10px;
   }
   .filtre {
-    top: 19px;
-    width: 300px;
-    height: 300px;
+    width: 335px;
+    height: 255px;
     position: absolute;
     border-radius: 10px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background: linear-gradient(to bottom, #FFFFFF 0%, #000000 50%);
+    background: linear-gradient(to bottom, white 0%, black 100%);
     /* Ajustez les couleurs et les opacités */
     opacity: 0.5;
     z-index: 1;

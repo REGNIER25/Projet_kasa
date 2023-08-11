@@ -3,6 +3,7 @@
 /* Conteneur du Slideshow */
 .slideshow-container {
   position: relative;
+  background-color: #F6F6F6;
 }
 
 
@@ -13,25 +14,10 @@
   width: 100%;
   height: 400px;
   position: relative;
-  transition: transform 0.5s ease-in-out;
+  // transition: transform 0.5s ease-in-out;
 }
 
-// //animation CSS
 
-
-// .collapse__content-animate {
-//   animation: slideInOut 2.0s ease-in-out;
-// }
-
-// /* Animation pour l'ouverture */
-// @keyframes slideInOut {
-//   0% {
-//     max-height: 0;
-//   }
-//   100% {
-//     max-height: 500px;
-//   }
-// }
 
 
 /* Chaque slide */
@@ -53,12 +39,11 @@
 .slideshow-controls {
   position: absolute;
   align-items: center;
-  justify-content: space-between;
-  /* Pour espacer les flèches sur les côtés */
+  // justify-content: space-between;
   bottom: 20px;
   left: 0;
   right: 0;
-  margin: 0 auto;
+  // margin: 0 auto;
   /* Centrer horizontalement */
 }
 
@@ -68,7 +53,10 @@
   border: none;
   cursor: pointer;
   margin-bottom: 70px;
-  margin-right: 850px;
+  margin-left:10px ;
+  margin-right:80% ;
+  // position: absolute;
+
 
 }
 
@@ -78,6 +66,10 @@
   border: none;
   cursor: pointer;
   margin-bottom: 70px;
+  
+
+  // position: absolute;
+
 }
 
 
@@ -99,6 +91,24 @@
   justify-content: center;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
+
+/* Animation pour le changement de diapositives */
+@keyframes slideChange {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Appliquer l'animation aux slides */
+.slide.active {
+  animation: slideChange 0.5s ease-in-out;
+}
+
 
 // Version responsive
 

@@ -47,7 +47,10 @@
 .collapse__content {
   padding: 5px;
   overflow: hidden;
-  background: #F6F6F6;
+  background-color: #F6F6F6;
+}
+
+.collapse__content p {
   margin-left: 10px;
 }
 
@@ -63,4 +66,5 @@
   100% {
     max-height: 500px;
   }
-}/*# sourceMappingURL=collapse.css.map */
+}
+/* Animation pour la fermeture *//*# sourceMappingURL=collapse.css.map */

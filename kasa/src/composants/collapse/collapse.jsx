@@ -35,7 +35,9 @@ const Collapse = ({ title, children }) => {
 </button>
 
  {/* Affiche le contenu (children) seulement si isCollapsed est faux */}
-{!isCollapsed && <div className="collapse__content collapse__content-animate">{children}</div>} 
+{!isCollapsed && <div className="collapse__content collapse__content-animate">{children}</div>}  
+
+
 
 
 
