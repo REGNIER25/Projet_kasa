@@ -1,10 +1,10 @@
-/* Style d'origine la page index */
+/* Style d'origine de la page index.js */
 
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat',
-    sans-serif;
+  /* changement avec police 'Montserrat' */
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

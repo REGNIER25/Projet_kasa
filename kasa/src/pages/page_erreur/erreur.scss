@@ -1,46 +1,48 @@
-/* Style de la page erreur */
+// Style de la page erreur
 
-
+// Variables
 $color-rose: #FF6060;
+$color-white: #FFFFFF;
+$color-grey: #F6F6F6;
+
 
 h1 {
-    color: $color-rose;
-    text-align: center;
-    font-weight: 700;
-    font-size: 288px;
-    margin-bottom: 30px;
+  color: $color-rose;
+  text-align: center;
+  font-weight: 700;
+  font-size: 288px;
+  margin-bottom: 30px;
 }
 
 .texte_erreur {
-    color: $color-rose;
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 30px;
+  color: $color-rose;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
 }
 
 .lien_accueil {
-    color: $color-rose;
-    font-size: 18px;
-    display: block;
-    text-align: center;
-    margin-bottom: 30px;
+  color: $color-rose;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-//version responsive
-
+// Version responsive
 @media (max-width: 768px) {
-    h1 {
-      font-size: 95px;
-      margin-bottom: 60px;
-    }
-  
-    .texte_erreur {
-      font-size: 20px;
-      margin-bottom: 60px;
-    }
-  
-    .lien_accueil {
-      font-size: 15px; 
-      margin-bottom: 60px;
-    }
+  h1 {
+    font-size: 95px;
+    margin-bottom: 60px;
   }
+
+  .texte_erreur {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+
+  .lien_accueil {
+    font-size: 15px;
+    margin-bottom: 60px;
+  }
+}

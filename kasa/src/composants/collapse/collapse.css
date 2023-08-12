@@ -1,7 +1,6 @@
-@charset "UTF-8";
 /* Style du composant Collapse */
 .collapse {
-  border: 1px solid #ccc;
+  border: 1px solid #F6F6F6;
   margin-bottom: 10px;
   border-radius: 4px;
   overflow: hidden;
@@ -21,26 +20,23 @@
 
 .collapse-title {
   flex: 1;
-  /* Désactive les événements de clic */
   pointer-events: none;
   cursor: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 18px;
 }
 
 .collapse__icon {
   font-size: 18px;
-  color: white;
-  transition: transform 0.2s ease-in-out;
-  /* Rend la flèche cliquable */
+  color: #FFFFFF;
+  transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  /* Réactive les événements de pointeur pour la flèche */
   pointer-events: auto;
 }
 
 .collapse__icon.down {
   font-size: 18px;
-  color: white;
+  color: #FFFFFF;
   transform: rotate(180deg);
 }
 
@@ -58,7 +54,6 @@
   animation: slideInOut 2s ease-in-out;
 }
 
-/* Animation pour l'ouverture */
 @keyframes slideInOut {
   0% {
     max-height: 0;
@@ -66,5 +61,4 @@
   100% {
     max-height: 500px;
   }
-}
-/* Animation pour la fermeture *//*# sourceMappingURL=collapse.css.map */
+}/*# sourceMappingURL=collapse.css.map */

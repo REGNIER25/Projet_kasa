@@ -1,21 +1,22 @@
 /* Style du composant Collapse */
 
+// Variables
+$color-rose: #FF6060;
+$color-white: #FFFFFF;
+$color-grey: #F6F6F6;
+$color-black: #000000;
 
 .collapse {
-  border: 1px solid #ccc;
+  border: 1px solid $color-grey;
   margin-bottom: 10px;
   border-radius: 4px;
   overflow: hidden;
   pointer-events: none;
   cursor: pointer;
-
-
 }
 
-
-
 .collapse__button {
-  background-color: #FF6060;
+  background-color: $color-rose;
   padding: 10px;
   width: 100%;
   text-align: left;
@@ -26,27 +27,24 @@
 
 .collapse-title {
   flex: 1;
-  /* Désactive les événements de clic */
   pointer-events: none;
   cursor: none;
-  color: white;
+  color: $color-white;
   font-size: 18px;
 
 }
 
 .collapse__icon {
   font-size: 18px;
-  color: white;
-  transition: transform 0.2s ease-in-out;
-  /* Rend la flèche cliquable */
+  color: $color-white;
+  transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  /* Réactive les événements de pointeur pour la flèche */
   pointer-events: auto;
 }
 
 .collapse__icon.down {
   font-size: 18px;
-  color: white;
+  color: $color-white;
   transform: rotate(180deg);
 }
 
@@ -54,12 +52,14 @@
 .collapse__content {
   padding: 5px;
   overflow: hidden;
-  background-color: #F6F6F6;
+  background-color: $color-grey;
 
 
 }
 
-.collapse__content p{margin-left:10px;}
+.collapse__content p {
+  margin-left: 10px;
+}
 
 //animation CSS
 
@@ -69,7 +69,6 @@
 
 }
 
-/* Animation pour l'ouverture */
 @keyframes slideInOut {
   0% {
     max-height: 0;
@@ -79,19 +78,3 @@
     max-height: 500px;
   }
 }
-
-/* Animation pour la fermeture */
-// @keyframes slideOutIn {
-//   0% {
-//     max-height: 500px;
-//   }
-//   100% {
-//     max-height: 0;
-//   }
-// }
-
-// /* Appliquer l'animation à la fermeture */
-// .closing {
-//   animation: slideOutIn 2.0s ease-out-in;
-// }
-

@@ -1,12 +1,21 @@
 /* Style du composant footer */
+
+// Variables
+$color-rose: #FF6060;
+$color-white: #FFFFFF;
+$color-grey: #F6F6F6;
+$color-black: #000000;
+
+
+
 .footer {
-  background-color: black;
+  background-color: $color-black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 25px;
-  color: white;
+  color: $color-white;
   height: 210px;
   max-width: 1440px;
 }

@@ -1,7 +1,16 @@
 /* Style de la page fichelogement */
 
+// Variables
+$color-rose: #FF6060;
+$color-white: #FFFFFF;
+$color-grey: #F6F6F6;
+$color-black: #000000;
+$color-greydark: #C4C4C4;
 
-.fiche {max-width : 1240px;
+
+
+.fiche {
+  max-width: 1240px;
   margin-left: 100px;
   margin-right: 100px;
 }
@@ -9,7 +18,7 @@
 h2,
 h3,
 p {
-  color: #FF6060;
+  color: $color-rose;
 }
 
 .titre-hote {
@@ -23,7 +32,9 @@ p {
   align-items: center;
 }
 
-.hote-mobile {display:none;}
+.hote-mobile {
+  display: none;
+}
 
 .hote-name {
   display: flex;
@@ -38,15 +49,14 @@ p {
   margin-bottom: -10px;
 }
 
-//cercle photo
+
 .circle {
-  background-color: #C4C4C4;
+  background-color: $color-greydark;
   width: 70px;
   height: 70px;
   border-radius: 50%;
 }
 
-//tags et étoiles
 
 .tags-stars {
   display: flex;
@@ -55,50 +65,44 @@ p {
   margin-bottom: 10px;
 }
 
-//tags
+
 
 .tag {
   display: inline-flex;
-  // align-items: center;
   margin-right: 5px;
   padding: 10px 20px;
   border-radius: 20px;
-  background-color: #FF6060;
-  color: #FFFFFF;
+  background-color: $color-rose;
+  color: $color-white;
   font-size: 14px;
   text-align: center;
 }
 
 
-//étoiles
 
 
 .star {
   display: flex;
-  color: #C4C4C4;
+  color: $color-greydark;
   font-size: 36px;
   margin-left: 20px;
 }
 
 
 .starrose {
-  color: #FF6060;
+  color: $color-rose;
 }
 
 
-// Collapses
 .collapses-container {
   display: grid;
-  /* Divise l'espace en deux colonnes égales */
   grid-template-columns: 1fr 1fr;
-  /* Espace entre les collapses*/
   grid-gap: 20px;
 }
 
 
-//liste des équipements
 .liste-equipements {
-  color: #FF6060;
+  color: $color-rose;
   padding: 5px;
   list-style-type: none;
 }
@@ -106,13 +110,16 @@ p {
 //version responsive
 @media (max-width: 768px) {
   .fiche {
-    margin-left: 10px; 
-    margin-right: 10px; 
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
-  //retirer hote desktop et mettre hote-mobile à la place
-  .hote {display:none;}
-  .hote-mobile {display:block;
+  .hote {
+    display: none;
+  }
+
+  .hote-mobile {
+    display: block;
     display: flex;
     align-items: center;
     margin-top: -40px;
@@ -124,48 +131,49 @@ p {
   }
 
   .circle {
-    width: 60px; 
-    height: 60px; 
+    width: 60px;
+    height: 60px;
   }
 
   .tags-stars {
     flex-direction: column;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
   }
 
-  //tags en mobile sur une ligne
 
-  .ligne-tags{width:100%;
+  .ligne-tags {
+    width: 100%;
     margin-bottom: 10px;
   }
+
   .tag {
     font-size: 12px;
     margin-bottom: 10px;
   }
 
-//mettre les étoiles sur la gauche avec l'hôte en face
 
-.stars{ margin-right :240px;
-width:50%;
+  .stars {
+    margin-right: 240px;
+    width: 50%;
 
-}
+  }
 
   .star {
     font-size: 30px;
   }
 
-  //collapses en mobile
 
   .collapses-container {
     display: flex;
     flex-direction: column;
-    margin-top :30px;
-    margin-bottom :30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+  }
+
+  .collapse-title {
+    font-size: 15px;
+  }
 
 }
-.collapse-title{font-size:15px;}
-
-}
-
-

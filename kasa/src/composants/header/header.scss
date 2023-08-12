@@ -1,5 +1,13 @@
 /* Style du composant header */
 
+// Variables
+$color-rose: #FF6060;
+$color-white: #FFFFFF;
+$color-grey: #F6F6F6;
+$color-black: #000000;
+
+
+
 .header {
   max-width: 1240px;
   margin-left: 100px;
@@ -15,10 +23,8 @@
 .nav a {
   margin-left: 30px;
   font-size: 25px;
-  color: #FF6060;
-  ;
+  color: $color-rose;
   text-decoration: none;
-
 }
 
 .nav a:focus {
@@ -39,7 +45,9 @@
     justify-content: space-between;
   }
 
-  .nav {margin-top:15px;}
+  .nav {
+    margin-top: 15px;
+  }
 
   .nav a {
     font-size: 20px;

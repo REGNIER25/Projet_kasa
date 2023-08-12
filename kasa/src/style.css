@@ -1,8 +1,8 @@
-@charset "UTF-8";
-/* Style d'origine la page index */
+/* Style d'origine de la page index.js */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Montserrat", sans-serif;
+  /* changement avec police 'Montserrat' */
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -58,13 +58,13 @@ code {
 }
 /* Style du composant footer */
 .footer {
-  background-color: black;
+  background-color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 25px;
-  color: white;
+  color: #FFFFFF;
   height: 210px;
   max-width: 1440px;
 }
@@ -81,7 +81,7 @@ code {
 }
 /* Style du composant Collapse */
 .collapse {
-  border: 1px solid #ccc;
+  border: 1px solid #F6F6F6;
   margin-bottom: 10px;
   border-radius: 4px;
   overflow: hidden;
@@ -101,33 +101,33 @@ code {
 
 .collapse-title {
   flex: 1;
-  /* Désactive les événements de clic */
   pointer-events: none;
   cursor: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 18px;
 }
 
 .collapse__icon {
   font-size: 18px;
-  color: white;
-  transition: transform 0.2s ease-in-out;
-  /* Rend la flèche cliquable */
+  color: #FFFFFF;
+  transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  /* Réactive les événements de pointeur pour la flèche */
   pointer-events: auto;
 }
 
 .collapse__icon.down {
   font-size: 18px;
-  color: white;
+  color: #FFFFFF;
   transform: rotate(180deg);
 }
 
 .collapse__content {
   padding: 5px;
   overflow: hidden;
-  background: #F6F6F6;
+  background-color: #F6F6F6;
+}
+
+.collapse__content p {
   margin-left: 10px;
 }
 
@@ -135,7 +135,6 @@ code {
   animation: slideInOut 2s ease-in-out;
 }
 
-/* Animation pour l'ouverture */
 @keyframes slideInOut {
   0% {
     max-height: 0;
@@ -145,57 +144,58 @@ code {
   }
 }
 /* Style du composant Slideshow */
-/* Conteneur du Slideshow */
 .slideshow-container {
   position: relative;
+  background-color: #F6F6F6;
 }
 
-/* Images des slides */
 .slideshow-slide {
   display: flex;
   overflow: hidden;
-  width: 100%;
-  height: 400px;
   position: relative;
-  transition: transform 0.5s ease-in-out;
+  height: 400px;
 }
 
-/* Chaque slide */
 .slide {
   flex: 0 0 100%;
   opacity: 0;
+  width: 100%;
+  height: 400px;
+  position: relative;
 }
 
-/* Slide actif */
+.slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .slide.active {
   flex: 0 0 100%;
   opacity: 1;
   position: absolute;
 }
 
-/* Contrôles du Slideshow au-dessus de l'image */
 .slideshow-controls {
   position: absolute;
   align-items: center;
-  justify-content: space-between;
-  /* Pour espacer les flèches sur les côtés */
   bottom: 20px;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  /* Centrer horizontalement */
 }
 
-/* Flèche de gauche */
 .prev {
   background: transparent;
   border: none;
   cursor: pointer;
   margin-bottom: 70px;
-  margin-right: 850px;
+  margin-left: 10px;
+  margin-right: 80%;
 }
 
-/* Flèche de droite */
 .next {
   background: transparent;
   border: none;
@@ -205,15 +205,14 @@ code {
 
 .fa-angle-left,
 .fa-angle-right {
-  color: white;
-  font-size: 140px;
+  color: #FFFFFF;
+  font-size: 130px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-/* Numérotation */
 .slide-number {
   font-size: 20px;
-  color: white;
+  color: #FFFFFF;
   font-weight: bold;
   text-align: center;
   display: flex;
@@ -222,9 +221,31 @@ code {
   text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+/* Animation pour le changement de diapositives */
+@keyframes slideChange {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.slide.active {
+  animation: slideChange 1s ease-in-out;
+}
+
 @media (max-width: 768px) {
   .slideshow-slide {
     height: 250px;
+  }
+  .slide {
+    flex: 0 0 100%;
+    opacity: 0;
+    width: 100%;
+    height: 250px;
+    position: relative;
   }
   .prev {
     margin-right: 285px;
@@ -275,7 +296,7 @@ p {
 }
 
 .prenom {
-  margin-bottom: 0px;
+  margin-bottom: -10px;
 }
 
 .circle {
@@ -316,9 +337,7 @@ p {
 
 .collapses-container {
   display: grid;
-  /* Divise l'espace en deux colonnes égales */
   grid-template-columns: 1fr 1fr;
-  /* Espace entre les collapses*/
   grid-gap: 20px;
 }
 
@@ -368,8 +387,7 @@ p {
     width: 50%;
   }
   .star {
-    font-size: 24px;
-    margin-top: 0;
+    font-size: 30px;
   }
   .collapses-container {
     display: flex;
@@ -383,8 +401,9 @@ p {
 }
 /* Style de la page home */
 .banner {
-  border-radius: 50px;
+  border-radius: 25px;
   justify-content: center;
+  text-align: center;
   max-width: 1240px;
   height: 220px;
   margin-left: 100px;
@@ -394,27 +413,25 @@ p {
   position: relative;
 }
 
-.banner::before {
-  content: "";
+.filtrebanner {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  /* Opacité (noir) */
-  mix-blend-mode: darken;
-  /* Effet de fusion darken */
-  border-radius: 50px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .slogan {
   font-size: 50px;
-  margin-left: 25%;
   display: inline-block;
-  vertical-align: middle;
   color: #FFFFFF;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  font-weight: bold;
+  position: relative;
+  margin-top: 70px;
 }
 
 .gallery {
@@ -443,7 +460,6 @@ p {
 }
 
 .img-gallery {
-  /* Largeur des images avec espace*/
   flex-basis: calc(33.333% - 20px);
   width: 300px;
   height: 300px;
@@ -457,10 +473,8 @@ p {
   height: 300px;
   position: absolute;
   border-radius: 10px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background: linear-gradient(to bottom, #FFFFFF 0%, #000000 50%);
-  /* Ajustez les couleurs et les opacités */
-  opacity: 0.5;
+  background: linear-gradient(to bottom, #FFFFFF 0%, #000000 100%);
+  opacity: 0.3;
   z-index: 1;
 }
 
@@ -472,43 +486,47 @@ p {
   left: 30px;
   width: 30%;
   font-weight: bold;
-  /* Pour placer le titre au-dessus du filtre */
   z-index: 2;
 }
 
 @media (max-width: 768px) {
   .banner {
+    border-radius: 10px;
+    text-align: left;
     width: 335px;
     height: 110px;
     margin: 0 auto;
-    /* Marge automatique sur les côtés pour centrer horizontalement */
+    margin-bottom: 5px;
+  }
+  .filtrebanner {
+    border-radius: 10px;
   }
   .slogan {
-    width: 215px;
+    width: 230px;
+    height: 30px;
     font-size: 24px;
-    margin-left: 5%;
+    margin-left: 10px;
+    margin-top: 15px;
   }
   .gallery {
     margin: 0 auto;
     margin-left: 5%;
     padding: 5px;
+    background: #FFFFFF;
   }
   .img-gallery {
     flex-basis: calc(50% - 5px);
-    /* Ajuster la largeur des images */
     width: 335px;
     height: 255px;
+    border-radius: 10px;
   }
   .filtre {
-    top: 19px;
-    width: 300px;
-    height: 300px;
+    width: 335px;
+    height: 255px;
     position: absolute;
     border-radius: 10px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background: linear-gradient(to bottom, #FFFFFF 0%, #000000 50%);
-    /* Ajustez les couleurs et les opacités */
-    opacity: 0.5;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #000000 100%);
+    opacity: 0.4;
     z-index: 1;
   }
   .titre {
@@ -518,7 +536,6 @@ p {
     width: 30%;
   }
 }
-/* Style de la page apropos */
 .bannerapropos {
   width: 1240px;
   height: 220px;
@@ -529,7 +546,6 @@ p {
   background-image: url("../../img/banner_apropos.png");
   position: relative;
 }
-
 .bannerapropos::before {
   content: "";
   position: absolute;
@@ -537,8 +553,8 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1); /* Opacité (noir) */
-  mix-blend-mode: darken; /* Effet de fusion darken */
+  background-color: rgba(0, 0, 0, 0.1);
+  mix-blend-mode: darken;
   border-radius: 25px;
 }
 
@@ -572,8 +588,8 @@ p {
   }
   .valeurs {
     width: 335px;
-    margin-left: 10px; /* Ajuster la marge */
-    margin-right: 10px; /* Ajuster la marge */
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 5px;
   }
   .valeur {
@@ -581,7 +597,6 @@ p {
     margin-bottom: 5px;
   }
 }
-/* Style de la page erreur */
 h1 {
   color: #FF6060;
   text-align: center;

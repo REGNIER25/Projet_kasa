@@ -1,5 +1,12 @@
 /* Style de la page home */
 
+// Variables
+$color-rose: #FF6060;
+$color-white: #FFFFFF;
+$color-grey: #F6F6F6;
+$color-black: #000000;
+
+
 
 .banner {
   border-radius: 25px;
@@ -29,11 +36,11 @@
 .slogan {
   font-size: 50px;
   display: inline-block;
-  color: white;
+  color: $color-white;
   z-index: 2;
   font-weight: bold;
-position: relative;
-margin-top:70px;
+  position: relative;
+  margin-top: 70px;
 }
 
 
@@ -42,7 +49,7 @@ margin-top:70px;
   max-width: 1240px;
   margin-left: 100px;
   margin-right: 100px;
-  background: #F6F6F6;
+  background: $color-grey;
   border-radius: 10px;
   margin-bottom: 20px;
   display: flex;
@@ -64,8 +71,6 @@ margin-top:70px;
 }
 
 .img-gallery {
-    /* Largeur des images avec espace*/
-
   flex-basis: calc(33.333% - 20px);
   width: 300px;
   height: 300px;
@@ -79,57 +84,53 @@ margin-top:70px;
   height: 300px;
   position: absolute;
   border-radius: 10px;
-  // du plus clair (en haut) au plus foncé (en bas)
-  background: linear-gradient(to bottom, white 0%,black 100%);
-    /* Ajustez les couleurs et les opacités */
+  background: linear-gradient(to bottom, $color-white 0%, $color-black 100%);
   opacity: 0.3;
   z-index: 1;
 }
 
 
 .titre {
-  color: #FFFFFF;
+  color: $color-white;
   font-size: 15px;
   position: absolute;
   bottom: 30px;
   left: 30px;
   width: 30%;
   font-weight: bold;
-  /* Pour placer le titre au-dessus du filtre */
   z-index: 2;
 }
 
 //version responsive
 @media (max-width: 768px) {
   .banner {
-  border-radius: 10px;
-  text-align: left;
+    border-radius: 10px;
+    text-align: left;
     width: 335px;
     height: 110px;
-    /* Marge automatique sur les côtés pour centrer horizontalement */
     margin: 0 auto;
     margin-bottom: 5px;
   }
 
   .filtrebanner {
-  border-radius: 10px;
+    border-radius: 10px;
   }
 
   .slogan {
     width: 230px;
-    height:30px;
+    height: 30px;
     font-size: 24px;
     margin-left: 10px;
     margin-top: 15px;
   }
-  
-  
+
+
 
   .gallery {
     margin: 0 auto;
     margin-left: 5%;
     padding: 5px;
-    background: WHITE;
+    background: $color-white;
 
   }
 
@@ -146,10 +147,8 @@ margin-top:70px;
     height: 255px;
     position: absolute;
     border-radius: 10px;
-    // du plus clair (en haut) au plus foncé (en bas)
-    background: linear-gradient(to bottom, white 0%,black 100%);
-      /* Ajustez les couleurs et les opacités */
-    opacity: 0.5;
+    background: linear-gradient(to bottom, $color-white 0%, $color-black 100%);
+    opacity: 0.4;
     z-index: 1;
   }
 

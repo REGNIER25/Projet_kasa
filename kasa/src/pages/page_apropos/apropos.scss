@@ -1,4 +1,11 @@
-/* Style de la page apropos */
+// Style de la page apropos
+
+// Variables
+$color-rose: #FF6060;
+$color-white: #FFFFFF;
+$color-grey: #F6F6F6;
+$color-black: #000000;
+
 
 
 .bannerapropos {
@@ -10,24 +17,21 @@
     margin-bottom: 20px;
     background-image: url("../../img/banner_apropos.png");
     position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        mix-blend-mode: darken;
+        border-radius: 25px;
+    }
 }
 
-  
-  .bannerapropos::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1); /* Opacité (noir) */
-    mix-blend-mode: darken; /* Effet de fusion darken */
-    border-radius: 25px;
-  }
-
-
 .valeurs {
-
     max-width: 1240px;
     margin-left: 150px;
     margin-right: 100px;
@@ -39,35 +43,34 @@
 
 .valeur {
     list-style-type: none;
-    color: #F6F6F6;
-    background-color: #FF6060;
+    color: $color-grey;
+    background-color: $color-rose;
     padding-left: 10px;
     border-radius: 5px;
     font-size: 24px;
 }
 
-//version responsive
+// Version responsive
 @media (max-width: 768px) {
-
-    .page-apropos{margin-left: 40px; 
+    .page-apropos {
+        margin-left: 40px;
     }
 
     .bannerapropos {
         width: 335px;
         height: 220px;
-        border-radius: 10px; 
-        
+        border-radius: 10px;
     }
 
     .valeurs {
         width: 335px;
-        margin-left: 10px; /* Ajuster la marge */
-        margin-right: 10px; /* Ajuster la marge */
+        margin-left: 10px;
+        margin-right: 10px;
         padding: 5px;
     }
 
     .valeur {
-        font-size: 16px; 
+        font-size: 16px;
         margin-bottom: 5px;
     }
 }
