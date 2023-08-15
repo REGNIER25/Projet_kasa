@@ -18,6 +18,7 @@ p {
 }
 
 .hote {
+  margin-top: 10px;
   display: flex;
   align-items: center;
 }
@@ -35,7 +36,7 @@ p {
 }
 
 .prenom {
-  margin-bottom: -10px;
+  margin-bottom: 5px;
 }
 
 .circle {

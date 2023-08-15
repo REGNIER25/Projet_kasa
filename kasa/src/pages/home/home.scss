@@ -96,7 +96,7 @@ $color-black: #000000;
   position: absolute;
   bottom: 30px;
   left: 30px;
-  width: 30%;
+  width: 60%;
   font-weight: bold;
   z-index: 2;
 }
@@ -106,7 +106,7 @@ $color-black: #000000;
   .banner {
     border-radius: 10px;
     text-align: left;
-    width: 335px;
+    width: 300px;
     height: 110px;
     margin: 0 auto;
     margin-bottom: 5px;
@@ -136,15 +136,15 @@ $color-black: #000000;
 
   .img-gallery {
     flex-basis: calc(50% - 5px);
-    width: 335px;
-    height: 255px;
+    width: 300px;
+    height: 200px;
     border-radius: 10px;
 
   }
 
   .filtre {
-    width: 335px;
-    height: 255px;
+    width: 300px;
+    height: 200px;
     position: absolute;
     border-radius: 10px;
     background: linear-gradient(to bottom, $color-white 0%, $color-black 100%);
@@ -156,6 +156,6 @@ $color-black: #000000;
     font-size: 15px;
     bottom: 30px;
     left: 30px;
-    width: 30%;
+    width: 60%;
   }
 }

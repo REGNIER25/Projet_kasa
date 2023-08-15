@@ -18,9 +18,10 @@ const FicheLogement = () => {
     setItem(itemTrouve);
   }, [id]);
 
-  if (!item) {
+  if (!item) {console.log ("Cette location n'existe pas.");
     return <div>{<Erreur />}</div>;
   }
+
 
 
   const [firstName, lastName] = item.host.name.split(' ');
@@ -97,7 +98,9 @@ const FicheLogement = () => {
 
 
       <div className="collapses-container">
+
         <div className='description-equipements'>
+
           <Collapse className='titre-collapse' title="Description">
             <p>{item.description}</p>
           </Collapse>
@@ -105,6 +108,7 @@ const FicheLogement = () => {
 
 
         <div className='description-equipements'>
+
           <Collapse className='titre-collapse' title="Équipement">
             <ul className='liste-equipements'>
               {item.equipments.map((equipment, index) => (
@@ -112,8 +116,10 @@ const FicheLogement = () => {
               ))}
             </ul>
           </Collapse>
+
         </div>
       </div>
+
     </div>
   );
 };
