@@ -7,7 +7,6 @@ $color-grey: #F6F6F6;
 $color-black: #000000;
 
 
-
 .footer {
   background-color: $color-black;
   display: flex;
@@ -16,23 +15,28 @@ $color-black: #000000;
   justify-content: center;
   font-size: 25px;
   color: $color-white;
+  width: 100%;
+  text-align: center;
   height: 210px;
-  max-width: 1440px;
+  bottom: 0;
 }
 
+
+
 .rights {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 //version responsive
 @media (max-width: 768px) {
 
   .footer {
-    width:100%;
+    bottom: 0;
   }
 
   .rights {
     width: 130px;
     font-size: 12px;
+
   }
 }

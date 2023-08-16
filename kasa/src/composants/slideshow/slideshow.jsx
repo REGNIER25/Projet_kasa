@@ -53,16 +53,17 @@ const Slideshow = () => {
       {item.pictures.length > 1 && (
         <div className="slideshow-controls">
 
+          <div className='fleches'>
 
-          <button className="prev" onClick={prevSlide}>
-            <i className="fa-solid fa-angle-left"></i>
-          </button>
+            <button className="prev" onClick={prevSlide}>
+              <i className="fa-solid fa-angle-left"></i>
+            </button>
 
 
-          <button className="next" onClick={nextSlide}>
-            <i className="fa-solid fa-angle-right"></i>
-          </button>
-
+            <button className="next" onClick={nextSlide}>
+              <i className="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
 
           <div className="slide-number">
             {getSlideNumberText()}

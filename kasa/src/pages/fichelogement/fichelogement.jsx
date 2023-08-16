@@ -11,15 +11,23 @@ const FicheLogement = () => {
   const { id } = useParams();
   console.log(id);
   const [item, setItem] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const itemTrouve = data.find((item) => item.id === id);
-
     setItem(itemTrouve);
+    setLoading(false);
   }, [id]);
 
-  if (!item) {console.log ("Cette location n'existe pas.");
-    return <div>{<Erreur />}</div>;
+
+  if (loading) {
+    // Affiche un écran de chargement pendant que les données sont chargées
+    return <div>Chargement en cours...</div>;
+  }
+
+  if (!item) {
+    console.log("Cette location n'existe pas.");
+    return <Erreur />;
   }
 
 
@@ -97,12 +105,12 @@ const FicheLogement = () => {
 
 
 
-      <div className="collapses-container">
+      <div className="collapses-container hauteur-collapse">
 
         <div className='description-equipements'>
 
           <Collapse className='titre-collapse' title="Description">
-            <p>{item.description}</p>
+            <div className='hauteur-collapse'>{item.description}</div>
           </Collapse>
         </div>
 
@@ -110,11 +118,13 @@ const FicheLogement = () => {
         <div className='description-equipements'>
 
           <Collapse className='titre-collapse' title="Équipement">
-            <ul className='liste-equipements'>
-              {item.equipments.map((equipment, index) => (
-                <li key={index}>{equipment}</li>
-              ))}
-            </ul>
+            <div className='hauteur-collapse'>
+              <ul className='liste-equipements'>
+                {item.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            </div>
           </Collapse>
 
         </div>

@@ -1,13 +1,13 @@
 /* Style du composant header */
 .header {
   max-width: 1240px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   height: 70px;
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .nav a {
@@ -15,6 +15,7 @@
   font-size: 25px;
   color: #FF6060;
   text-decoration: none;
+  margin-right: 5px;
 }
 
 .nav a:focus {
@@ -24,11 +25,12 @@
 .logokasa {
   width: 210px;
   height: 70px;
+  margin-left: 5px;
 }
 
 @media (max-width: 768px) {
   .header {
-    margin: auto;
+    padding: 10px;
   }
   .nav {
     margin-top: 5px;

@@ -1,4 +1,4 @@
-// Import du fichier CSS associé à ce composant
+
 import './footer.css';
 import logokasa2 from '../../img/logokasa2.png';
 

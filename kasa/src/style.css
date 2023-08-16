@@ -1,5 +1,13 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1400px;
+  margin: auto;
+  /* margin: 0; */
   /* changement avec police 'Montserrat' */
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -40,19 +48,19 @@ code {
 
 @media (max-width: 768px) {
   .header {
-    margin-left: 10px;
-    margin-right: 10px;
-    justify-content: space-between;
+    margin: auto;
   }
   .nav {
-    margin-top: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
   }
   .nav a {
-    font-size: 20px;
+    font-size: 15px;
   }
   .logokasa {
-    width: 145px;
-    height: 45px;
+    margin-top: 5px;
+    width: 100px;
+    height: 30px;
   }
 }
 /* Style du composant footer */
@@ -73,6 +81,9 @@ code {
 }
 
 @media (max-width: 768px) {
+  .footer {
+    width: 100%;
+  }
   .rights {
     width: 130px;
     font-size: 12px;
@@ -278,6 +289,7 @@ p {
 }
 
 .hote {
+  margin-top: 10px;
   display: flex;
   align-items: center;
 }
@@ -295,7 +307,7 @@ p {
 }
 
 .prenom {
-  margin-bottom: -10px;
+  margin-bottom: 5px;
 }
 
 .circle {
@@ -483,7 +495,7 @@ p {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  width: 30%;
+  width: 60%;
   font-weight: bold;
   z-index: 2;
 }
@@ -492,7 +504,7 @@ p {
   .banner {
     border-radius: 10px;
     text-align: left;
-    width: 335px;
+    width: 300px;
     height: 110px;
     margin: 0 auto;
     margin-bottom: 5px;
@@ -515,13 +527,13 @@ p {
   }
   .img-gallery {
     flex-basis: calc(50% - 5px);
-    width: 335px;
-    height: 255px;
+    width: 300px;
+    height: 200px;
     border-radius: 10px;
   }
   .filtre {
-    width: 335px;
-    height: 255px;
+    width: 300px;
+    height: 200px;
     position: absolute;
     border-radius: 10px;
     background: linear-gradient(to bottom, #FFFFFF 0%, #000000 100%);
@@ -532,7 +544,7 @@ p {
     font-size: 15px;
     bottom: 30px;
     left: 30px;
-    width: 30%;
+    width: 60%;
   }
 }
 .bannerapropos {

@@ -1,3 +1,9 @@
+.page-erreur {
+  max-width: 1240px;
+  margin: auto;
+  margin-bottom: 300px;
+}
+
 h1 {
   color: #FF6060;
   text-align: center;
@@ -24,14 +30,15 @@ h1 {
 @media (max-width: 768px) {
   h1 {
     font-size: 95px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
   .texte_erreur {
+    white-space: pre-line;
     font-size: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
   .lien_accueil {
     font-size: 15px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
 }/*# sourceMappingURL=erreur.css.map */

@@ -2,6 +2,8 @@
 .slideshow-container {
   position: relative;
   background-color: #F6F6F6;
+  max-width: 1240px;
+  margin: auto;
 }
 
 .slideshow-slide {
@@ -36,26 +38,32 @@
 
 .slideshow-controls {
   position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.fleches {
+  display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
   bottom: 20px;
-  left: 0;
-  right: 0;
+  margin-bottom: 80px;
 }
 
 .prev {
   background: transparent;
   border: none;
   cursor: pointer;
-  margin-bottom: 70px;
   margin-left: 10px;
-  margin-right: 80%;
 }
 
 .next {
   background: transparent;
   border: none;
   cursor: pointer;
-  margin-bottom: 70px;
+  margin-right: 10px;
 }
 
 .fa-angle-left,
@@ -70,7 +78,6 @@
   color: #FFFFFF;
   font-weight: bold;
   text-align: center;
-  display: flex;
   align-items: center;
   justify-content: center;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
@@ -102,13 +109,9 @@
     height: 250px;
     position: relative;
   }
-  .prev {
-    margin-right: 285px;
-  }
   .fa-angle-left,
   .fa-angle-right {
-    font-size: 80px;
-    margin-top: 60px;
+    font-size: 70px;
   }
   .slide-number {
     font-size: 16px;

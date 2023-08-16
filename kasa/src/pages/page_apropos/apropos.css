@@ -1,12 +1,21 @@
+.page-apropos {
+  max-width: 1240px;
+  margin: auto;
+}
+
 .bannerapropos {
   width: 1240px;
   height: 220px;
-  margin-left: 10px;
-  margin-right: auto;
+  margin: auto;
   border-radius: 25px;
   margin-bottom: 20px;
   background-image: url("../../img/banner_apropos.png");
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .bannerapropos::before {
   content: "";
@@ -22,40 +31,22 @@
 
 .valeurs {
   max-width: 1240px;
-  margin-left: 150px;
-  margin-right: 100px;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
+  margin-left: 80px;
+  margin-right: 80px;
   margin-bottom: 20px;
-}
-
-.valeur {
-  list-style-type: none;
-  color: #F6F6F6;
-  background-color: #FF6060;
-  padding-left: 10px;
-  border-radius: 5px;
-  font-size: 24px;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
-  .page-apropos {
-    margin-left: 40px;
-  }
   .bannerapropos {
     width: 335px;
     height: 220px;
     border-radius: 10px;
   }
   .valeurs {
-    width: 335px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 5px;
-  }
-  .valeur {
-    font-size: 16px;
-    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }/*# sourceMappingURL=apropos.css.map */

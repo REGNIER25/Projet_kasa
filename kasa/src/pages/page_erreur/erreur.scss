@@ -5,6 +5,12 @@ $color-rose: #FF6060;
 $color-white: #FFFFFF;
 $color-grey: #F6F6F6;
 
+.page-erreur {
+  max-width: 1240px;
+  margin: auto;
+  margin-bottom: 300px;
+}
+
 
 h1 {
   color: $color-rose;
@@ -33,16 +39,17 @@ h1 {
 @media (max-width: 768px) {
   h1 {
     font-size: 95px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
 
   .texte_erreur {
+    white-space: pre-line;
     font-size: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
 
   .lien_accueil {
     font-size: 15px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
 }

@@ -11,7 +11,8 @@ $color-black: #000000;
 .slideshow-container {
   position: relative;
   background-color: $color-grey;
-
+  max-width: 1240px;
+  margin: auto;
 }
 
 
@@ -52,22 +53,31 @@ $color-black: #000000;
 }
 
 
+
 .slideshow-controls {
   position: absolute;
-  align-items: center;
-  bottom: 20px;
-  left: 0;
-  right: 0;
+  bottom: 10px;
+  width: 100%;
 }
 
+
+.fleches {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  bottom: 20px;
+  margin-bottom: 80px;
+
+}
 
 .prev {
   background: transparent;
   border: none;
   cursor: pointer;
-  margin-bottom: 70px;
   margin-left: 10px;
-  margin-right: 80%;
+
 }
 
 
@@ -75,7 +85,8 @@ $color-black: #000000;
   background: transparent;
   border: none;
   cursor: pointer;
-  margin-bottom: 70px;
+  margin-right: 10px;
+
 }
 
 
@@ -84,16 +95,13 @@ $color-black: #000000;
   color: $color-white;
   font-size: 130px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
-
 }
-
 
 .slide-number {
   font-size: 20px;
   color: $color-white;
   font-weight: bold;
   text-align: center;
-  display: flex;
   align-items: center;
   justify-content: center;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
@@ -132,17 +140,12 @@ $color-black: #000000;
     position: relative;
   }
 
-  .prev {
-    margin-right: 285px;
-
-  }
-
-
   .fa-angle-left,
   .fa-angle-right {
-    font-size: 80px;
-    margin-top: 60px;
+    font-size: 70px;
   }
+
+
 
   .slide-number {
     font-size: 16px;

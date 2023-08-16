@@ -44,10 +44,21 @@
   padding: 5px;
   overflow: hidden;
   background-color: #F6F6F6;
+  height: 100%;
 }
 
 .collapse__content p {
   margin-left: 10px;
+}
+
+.collapse__content div {
+  height: 200px;
+}
+
+.collapse__content div {
+  margin-left: 10px;
+  color: #FF6060;
+  margin-top: 5px;
 }
 
 .collapse__content-animate {
