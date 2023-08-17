@@ -57,18 +57,20 @@ $color-black: #000000;
 
 }
 
+//collapses page à propos
+
 .collapse__content p {
   margin-left: 10px;
 }
 
-.collapse__content div {
-  height: 200px;
-}
+//collapses fiche logement
 
 .collapse__content div {
+  height: 200px;
   margin-left: 10px;
   color: $color-rose;
   margin-top: 5px;
+
 }
 
 

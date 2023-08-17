@@ -6,6 +6,7 @@
 }
 
 .banner {
+  width: 100%;
   border-radius: 25px;
   justify-content: center;
   display: flex;
@@ -97,6 +98,7 @@
 
 @media (max-width: 768px) {
   .banner {
+    width: calc(100% - 60px);
     border-radius: 10px;
     text-align: left;
     width: 300px;
